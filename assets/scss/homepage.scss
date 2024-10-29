@@ -1,0 +1,1096 @@
+@import 'variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.font-heading{
+    font-family: "Inter", sans-serif;
+}
+.font-primary{
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    font-size: clamp(#{16px}, 5vw, #{22px});
+}
+h2{
+    font-size: clamp(#{14px}, 5vw, #{28px});
+}
+h4{
+    font-size: clamp(#{10px}, 5vw, #{18px});
+}
+p{
+    font-size: clamp(#{10px}, 4vw, #{16px});;
+}
+.btn-dark-green{
+    background-color: $secondary;
+    color: $white;
+}
+.btn-dark-green:hover{
+    background-color: $orange;
+    color: $white;
+}
+.text-primary{
+    color: $primary;
+}
+.text-dark-green{
+    color: $secondary;
+}
+.text-light-green{
+    color: $light-green;
+}
+.text-orange{
+    color: $orange;
+}
+.bg-gradients{
+    background: linear-gradient(180deg, #efead3 -0.46%, #1eb5a3 99.84%);
+}
+
+// style navbar
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 25px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    border-radius: 38px;
+    width: 90%;
+    justify-content: center;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        img{
+            width: 15%;
+            height: auto;
+            z-index: 3;
+        }
+        .name{
+            width: 100%;
+            color: black;
+            font-size: 5rem;
+            font-family: 'Holtwood One SC', sans-serif;
+        }
+    }
+
+    ul li a{
+        font-size: clamp(#{12px}, 5vw, #{16px});
+        color: #000;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        padding: 70px 16px 16px 16px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        gap: 70px;
+        width: 90%;
+        transform: translateY(-100%);
+        text-align: center;
+        color: black;
+        transition: all 0.5s ease;
+        z-index: 2;
+        
+        a:hover{
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .nav-links.show{
+        display: flex;
+        transform: translateY(0);
+        top: 0;
+        margin-top: 70px;
+    }
+}
+
+// .dropdown-menu li {
+// position: relative;
+// }
+// .dropdown-menu .dropdown-submenu {
+// display: none;
+// position: absolute;
+// left: 100%;
+// top: -7px;
+// }
+// .dropdown-menu .dropdown-submenu-left {
+// right: 100%;
+// left: auto;
+// }
+// .dropdown-menu > li:hover > .dropdown-submenu {
+// display: block;
+// }
+
+.burger{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 2;
+
+    .line{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: $primary;
+        border-radius: 3px;
+    }
+}
+
+// .show .burger {
+//   transform: rotate(45deg);
+// }
+
+// .show .burger::before {
+//   transform: rotate(90deg) translate(5px, 0px);
+// }
+
+// .show .burger::after {
+//   transform: rotate(-90deg) translate(5px, 0px);
+// }
+
+//style hero
+.hero{
+    min-height: 100vh;
+    background-image: url(../images/background/hero2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    .containers{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        max-width: none;
+    }
+    .welcome{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        margin-top: 60%;
+    }
+    h2{
+        margin-top: 80px;
+        line-height: 1.5;
+    }
+    .motto{
+        font-size: clamp(#{10px}, 5vw, #{18px});
+    }
+    .cursor{
+        display: inline-block;
+        width: 3px;
+        animation: blink 1s infinite;
+        margin-top: 1px;
+        .typing{
+            animation: none;
+        }
+    }
+    @keyframes blink {
+        0%  { background-color: #ccc; }
+        49% { background-color: #ccc; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100%  { background-color: #ccc; }
+    }
+    .bg-detail{
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.80);
+        box-shadow: 0px 30px 50px -15px rgba(143, 144, 188, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 14px 16px 14px 14px;
+        margin-top: 32px;
+        width: fit-content;
+        height: auto;
+    }
+    .detail{
+        flex-direction: row;
+    }
+    .category{
+        font-size: clamp(#{6px}, 5vw, #{11px});
+    }
+    .result{
+        font-size: clamp(#{6px}, 5vw, #{10px});
+        color: $dark-gray
+    }
+    .vl {
+        border-left: 1px solid $dark-gray;
+        height: 32px;
+    }
+    .group{
+        flex-direction: column;
+    }
+}
+
+#animation{
+    min-height: 70vh;
+    background-color: #222;
+    overflow-y: hidden;
+    position: relative;
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100.1%;
+        background-color: #ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(500px at left center);
+        // transition: clip-path 5s ease-in-out; 
+        border: none;
+        z-index: 2;
+    }
+    .title{
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        color: $primary;
+        z-index: 1;
+        font-size: 25vw;
+        font-weight: 600;
+    }
+    .inner-title{
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        color: $primary;
+        z-index: 1;
+        font-size: 25vw;
+        font-weight: 600;
+        background-image: url("../images/background/hero2.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+#sre-about{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.00) 0.37%, rgba(157, 180, 32, 0.13) 16.79%, #E4F6E1 76.3%, #F5F5F5 93.22%);
+    min-height: 40vh;
+    padding: 30px 30px 10px 30px;
+    h2{
+        font-size: clamp(#{10px}, 5vw, #{24px});
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    h3{
+        font-size: clamp(#{10px}, 5vw, #{24px});
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+    .lamp{
+        width: 20%;
+    }
+    .city{
+        width: 80%;
+        height: auto;
+    }
+    .caption{
+        padding-left: 10px;
+        padding-bottom: 0;
+    }
+    p{
+        font-size: 10px;
+    }
+    .group{
+        flex-direction: column;
+    }
+    .group-1{
+        flex-direction: column;
+    }
+    .image-heading{
+        flex-direction: row;
+    }
+}
+#doing{
+    background-color: #F5F5F5;
+    min-height: 120svh;
+    padding: 20px 30px 90px 30px;
+    .containers{
+        flex-direction: column;
+        width: 100%;
+    }
+    h2{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    h3{
+        overflow: hidden;
+        font-size:  clamp(#{14px}, 5vw, #{16px});
+    }
+    .grad{
+        background: linear-gradient(90deg, #427741 -0.46%, #A0B51E 99.84%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .card-list{
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+        margin-top: 10px;
+    }
+    .card{
+        height: 100%;
+        margin-top: 20px;
+    }
+    .card-body{
+        padding: 10px 12px;
+    }
+    .card.white{
+        background-color: $white;
+    }
+    .card.green{
+        background-color: $secondary;
+    }
+    .btn-dark-green{
+        border-radius: 20px;
+        font-size: clamp(#{8px}, 5vw, #{16px});
+        margin-top: 50px;
+        width: 50%;
+    }
+    p{
+        font-size: clamp(#{10px}, 5vw, #{12px});
+    }
+    
+}
+
+#partners{
+    min-height: 100vh;
+    // background-image: url(../images/background/bg-partner.png);
+    // background-color: $primary;
+    background: linear-gradient(180deg, #F5F5F5 5%, #66a291 26%, #1b8769 50%, #3db694 80%, #F5F5F5 98%);
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    #lottie-animation{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .caption{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // top: -30px;
+        z-index: 2;
+    }
+    h3{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 40px;
+    }
+    h4{
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    // .grad{
+    //     background: linear-gradient(180deg, #c99a0b, #fdfffe );
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;   
+    // }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes slider{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+#slider{
+   min-height: 80vh;
+   padding-top: 50px;
+   overflow: hidden;
+   background-color: #F5F5F5;
+   .logos_slider{
+    .overflow{
+        display: flex;
+        .logos_wrapper{
+            display: flex;
+            justify-content: space-around;
+            animation: scroll 15s linear infinite;
+            .logo_item{
+                margin-left: 1rem;
+                display: grid;
+                place-items: center;
+                border-radius: 30px;
+                box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.10);
+                img{
+                    width: 200px;
+                    height: 202px;
+                    place-items: center;
+                }
+            }
+        }
+    }
+   }
+   .logos_right{
+    padding-top: 50px;
+    .overflow{
+        display: flex;
+        .logos_wrapper{
+            display: flex;
+            justify-content: space-around;
+            animation: slider 15s linear infinite;
+            .logo_item{
+                margin-left: 1rem;
+                display: grid;
+                place-items: center;
+                border-radius: 30px;
+                box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.10);
+                img{
+                    width: 200px;
+                    height: 202px;
+                    place-items: center;
+                }
+            }
+        }
+    }
+   }
+}
+//graphic section////////////////////////////////////
+.graphic{
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url('../images/background/graphic.svg');
+    background-image: url(../images/background/bg-macbook.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+//graphic footer////////////////////////////////////
+footer{
+    background-color: $darker;
+    padding: 30px;
+    min-height: 80vh;
+    h4{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+        margin-bottom: 20px;
+    }
+    h5{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+    }
+    span{
+        font-size: clamp(#{10px}, 6vw, #{18px});
+    }
+    hr{
+        color: $white;
+        width: 100%;
+        margin-top: 80px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    .recap{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        padding-top: 56.25%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    
+    .contact{
+        margin-top: 50px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            gap: 20px;
+            padding-top: 40px;
+            padding-left: 0;
+            // transform: translate(-50%, -50%);
+        }
+        ul li {
+            list-style: none;
+        }
+        ul li a {
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow-y: hidden;
+            border: 3px solid $white;
+            z-index: 1;
+        }
+        ul li a .icon {
+            position: relative;
+            color: $white;
+            transition: .5s;
+            z-index: 3;
+            font-size: 32px;
+            margin-top: 2px;
+            overflow-y: hidden;
+        }
+    
+        ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+    
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+        ul li a:hover:before {
+            top: 0;
+        }
+
+        .fa-brands.fa-instagram.icon{
+            font-size: 35px;
+            line-height: 70px;
+
+        }
+    
+        ul li:nth-child(1) a:before{
+            background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(202.83% 136.37% at 84.50% 113.50%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+        }
+    
+        ul li:nth-child(2) a:before{
+            background: #000;
+        }
+        
+        ul li:nth-child(3) a:before {
+            background: #0077b5;
+        }
+    
+        ul li:nth-child(4) a:before {
+            background: #dd4b39;
+        }
+    }
+}
+
+// ///////////////////////////////media big phone 500 ////////////////////////////
+@media screen and (min-width: 500px){
+    .hero{
+        h1{
+            margin-top: 50%;
+        }
+    }
+    #partners{
+        #lottie-animation{
+            width: 60%;
+            margin-left: 20%;
+        }
+    }
+    .graphic{
+        min-height: 70vh;
+        background-image: url(../images/background/bg-macbook.svg);
+    }
+    #sre-about{
+        .group-1{
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        h2{
+            font-size: clamp(#{30px}, 5vw, #{42px});
+        }
+        h3{
+            font-size: clamp(#{30px}, 5vw, #{42px});
+        }
+        p{
+            font-size: clamp(#{10px}, 5vw, #{14px});
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+}
+
+// ///////////////////////////////media big phone 600 ////////////////////////////
+@media screen and (min-width: 635px) and (max-width: 767px) {
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .hero{
+        h1{
+            margin-top: 40%;
+        }
+        .category{
+            font-size: clamp(#{8px}, 5vw, #{12px});
+        }
+        .result{
+            font-size: clamp(#{8px}, 5vw, #{10px});
+
+        }
+    }
+    #animation{
+        min-height: 150vh;
+    }
+    .graphic{
+        min-height: 80vh;
+    }
+    #doing{
+        .btn-dark-green{
+            font-size: clamp(#{10px}, 5vw, #{16px}); ;
+        }
+    }
+}
+//     #sre-about{
+//         .group-1{
+//             flex-direction: row;
+//             margin-top: 30px;
+//         }
+//         h2{
+//             font-size: clamp(#{30px}, 5vw, #{40px});
+//         }
+//         h3{
+//             font-size: clamp(#{30px}, 5vw, #{40px});
+//         }
+//         .caption{
+//             width: 70%;
+//             padding-right: 20px;
+//         }
+//         .lamp{
+//             width: 50%;
+//         }
+//     }
+
+// ///////////////////////////////media big tablet 700 ////////////////////////////
+@media screen and (min-width: 768px) and (max-width: 927px) {
+    h1{
+        font-size: 30px;
+    }
+    header{
+        padding: 20px 50px;
+    }
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .hero{
+        padding: 50px;
+        h1{
+            margin-top: 20%;
+        }
+        .bg-detail{
+            width: fit-content;
+            padding: 20px 20px;
+        }
+        .category{
+            font-size: clamp(#{14px}, 5vw, #{16px});
+        }
+        .result{
+            font-size: clamp(#{12px}, 5vw, #{14px});
+        }
+    }
+    #animation{
+        min-height: 150vh;
+    }
+    .graphic{
+        min-height: 80svh;
+        background-image: url(../images/background/bg-macbook.svg);
+    }
+    #sre-about{
+        padding: 50px;
+        h2{
+            font-size: clamp(#{60px}, 5vw, #{65px});
+        }
+        h3{
+            font-size: clamp(#{60px}, 5vw, #{65px});
+        }
+        p{
+            font-size: clamp(#{12px}, 5vw, #{16px});
+        }
+        .col-md-12.image-heading{
+            .col-md-6.group{
+                width: 40%;
+            }
+            .col-md-6.caption{
+                width: 60%;
+            }
+        }
+    }
+    #doing{
+        min-height: 60svh;
+        p{
+            font-size: clamp(#{8px}, 5vw, #{14px});
+        }
+        .btn-dark-green{
+            font-size: 16px;
+        }
+        .card-list{
+            flex-direction: row;
+        }
+        .card{
+            height: 400px;
+        }
+    }
+}
+// ///////////////////////////////media big tablet, small computer 900 ////////////////////////////
+@media screen and (min-width: 928px) {
+    header{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 3px 18px;
+        .nav-links{
+            flex-direction: row;
+            transform: none;
+            z-index: 0;
+            transition: none;
+            justify-content: right;
+            position: relative;
+            background-color: transparent;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            gap: 50px;
+        }
+        .logo{
+            img{
+                width: 20%;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .burger{
+        display: none;
+    }
+    .hero{
+        padding: 60px;
+        h1{
+            margin-top: 20%;
+        }
+        .bg-detail{
+            padding: 14px 66px 14px 14px;
+        }
+        .category{
+            font-size: 14px;
+        }
+        .result{
+            font-size: 12px;
+        }
+    }
+    #animation{
+        min-height: 200vh;
+    }
+    #sre-about{
+        padding: 60px;
+        .group-1{
+            flex-direction: row;
+            margin-top: 30px;
+            .col-md-6.image-heading{
+                width: 35%;
+            }
+        }
+        .col-md-12.image-heading{
+            .col-md-6.group{
+                width: 30%;
+            }
+            .col-md-6.caption{
+                width: 70%;
+            }
+        }
+        h2{
+            font-size: clamp(#{60px}, 5vw, #{68px});
+        }
+        h3{
+            font-size: clamp(#{60px}, 5vw, #{68px});
+        }
+        p{
+            font-size: clamp(#{14px}, 5vw, #{18px});
+        }
+        
+    }
+    #doing{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+        .grad{
+            width: 60%;
+        }
+        h2{
+            font-size: clamp(#{40px}, 5vw, #{65px});
+        }
+        p{
+            font-size: clamp(#{14px}, 5vw, #{16px});
+        }
+        .containers{
+            justify-content: center;
+            align-items: center;
+        }
+        .card-list{
+            flex-direction: row;
+            margin-top: 30px;
+            width: 100%;
+            gap: 20px;
+        }
+        .card{
+            width: 30%;
+            height: 420px;
+        }
+        .btn-dark-green{
+            width: 50%;
+            margin-top: 50px;
+            font-size:  clamp(#{16px}, 5vw, #{20px});
+        }
+        p{
+            font-size:  clamp(#{12px}, 5vw, #{14px});
+        }
+    }
+    #president{
+        .caption-president{
+            font-size: clamp(#{16px}, 5vw, #{20px});
+        }
+    }
+    .graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+    footer{
+        padding: 50px 130px;
+    }
+}
+
+// ///////////////////////////////media dekstop 500 ////////////////////////////
+@media screen and (min-width: 1200px){
+    header{
+        padding-left: 75px;
+        padding-right: 90px;
+    }
+    nav{
+        padding: 10px 25px;
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+    }
+    .hero{
+        padding: 40px 90px;
+        h1{
+            font-size: clamp(#{28px}, 5vw, #{30px});
+            margin-top: 15%;
+        }
+        h2{
+            font-size: clamp(#{32px}, 5vw, #{36px});
+        }
+        .bg-detail{
+            width: fit-content;
+            padding: 16px 80px 16px 16px;
+        }
+        .category{
+            font-size: clamp(#{12px}, 5vw, #{14px});
+        }
+        .result{
+            font-size: clamp(#{10px}, 5vw, #{12px});
+
+        }
+    }
+    #animation{
+        min-height: 200vh;
+    }
+    #sre-about{
+        padding: 10px 90px;
+        min-height: 100vh;
+        .image-container{
+            gap: 120px;
+            justify-content: center;
+        }
+        .city{
+            width: 60%;
+        }
+        .lamp{
+            width: 15%;
+        }
+        p{
+            font-size: clamp(#{12px}, 5vw, #{20px});
+        }
+        
+    }
+    #doing{
+        padding: 10px 30px;
+        .card-list{
+            gap: 40px;
+        }
+        .card{
+            width: 25%;
+            height: 400px;
+        }
+        h2{
+            font-size: clamp(#{30px}, 5vw, #{45px});
+            width: 100%;
+        }
+    }
+    footer{
+        min-height: 100vh;
+        padding-left: 350px;
+        padding-right: 350px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        hr{
+            margin-top: 10px;
+        }
+        span{
+            margin-top: 10px;
+        }
+    }
+    .graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 120vh;
+    }
+}
+@media screen and (min-width: 1600px){
+    header{
+        padding: 20px 90px;
+    }
+    nav{
+        padding: 20px 25px;
+        ul{
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .hero{
+        h1{
+            margin-top: 18%;
+        }
+        h1, h2{
+            font-size: 42px;
+        }
+        .motto{
+            font-size: 30px;
+        }
+        .category{
+            font-size: 18px;
+        }
+        .result{
+            font-size: 14px;
+        }
+        .vl{
+            height: 45px;
+        }
+    }
+    #animation{
+        min-height: 180vh;
+    }
+    #sre-about{
+        p{
+            font-size: 24px;
+        }
+        .col-md-12.image-heading{
+            padding: 0px 30px;
+            .col-md-6.caption{
+                width: 60%;
+            }
+        }
+    }
+    #doing{
+        .card{
+            height: 465px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px;
+        }
+       
+    }
+}
+    

@@ -1,0 +1,653 @@
+@import 'variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.font-heading{
+    font-family: "Inter", sans-serif;
+}
+.font-primary{
+    font-family: "Poppins", sans-serif;
+    
+}
+.btn-dark-green{
+    background-color: $secondary;
+    color: $white;
+}
+.btn-dark-green:hover{
+    background-color: $orange;
+    color: $white;
+}
+.text-primary{
+    color: $primary;
+}
+.text-dark-green{
+    color: $secondary;
+}
+.text-light-green{
+    color: $light-green;
+}
+.text-orange{
+    color: $orange;
+}
+.text-gradient{
+    background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-light-yellow{
+    background-color: $light-yellow;
+}
+.text-yellow{
+    color: $yellow;
+}
+h1{
+    font-size: clamp(#{38px}, 5vw, #{40px});
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+h2{
+    font-size: clamp(#{12px}, 5vw, #{16px});
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+// style navbar
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+    padding: 20px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 25px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    border-radius: 38px;
+    width: 90%;
+    justify-content: center;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        img{
+            width: 15%;
+            height: auto;
+            z-index: 3;
+        }
+        .name{
+            width: 100%;
+            color: black;
+            font-size: 5rem;
+            font-family: 'Holtwood One SC', sans-serif;
+        }
+    }
+
+    ul li a{
+        font-size: clamp(#{12px}, 5vw, #{16px});
+        color: #000;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        padding: 70px 16px 16px 16px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        gap: 70px;
+        width: 90%;
+        transform: translateY(-100%);
+        text-align: center;
+        color: black;
+        transition: all 0.5s ease;
+        z-index: 2;
+        
+        a:hover{
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .nav-links.show{
+        display: flex;
+        transform: translateY(0);
+        top: 0;
+        margin-top: 70px;
+    }
+}
+
+.burger{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 2;
+
+    .line{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: $primary;
+        border-radius: 3px;
+    }
+}
+#hero{
+    padding: 30px;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #DDE7B8 7.58%, #1C4839 98.88%);
+    .group{
+        flex-direction: column;
+    }
+    .caption-heading{
+        margin-top: 20px;
+    }
+    h2{
+        line-height: 1.5;
+    }
+    .floating-image{
+        width: 90%;
+        height: 100%;
+        position: relative;
+        animation: floatAnimation 3s ease-in-out infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes floatAnimation {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+    }
+}
+#review{
+    background: linear-gradient(180deg, #1C4839 4.5%, #159771 82.5%, $light-green 100%);
+    padding: 10px 30px;
+    hr{
+        color: #fff;
+        font-size: 2px;
+    }
+    a{
+        color: $white;
+        font-size: 10px;
+        text-decoration: none;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        &:hover{
+           color: $yellow;
+        }
+    }
+}
+#news{
+    background: linear-gradient(180deg, $light-green 4.5%, #159771 32.5%,  $primary 70%, $white 100%);
+    padding: 10px 30px 100px 30px;
+    hr{
+        color: $darker;
+    }
+    a{
+        color: $white;
+        font-size: 10px;
+        text-decoration: none;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        &:hover{
+           color: $yellow;
+        }
+    }
+}
+.article{
+    min-height: 100svh;
+    a{
+        color: $white;
+        &:hover{
+            color: $yellow;
+        }
+    }
+    h3{
+        font-size: 30px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .card-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 16px;
+        width: 100%;
+        max-width: 1200px;
+    }
+    .card{
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+        h5{
+            font-size: 14px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+        span{
+            font-size: 12px;
+        }
+        p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+    .card-body{
+        padding: 5px 0px;
+    }
+}
+#graphic{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/background/graphic.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+footer{
+    background-color: $darker;
+    padding: 30px;
+    min-height: 100vh;
+    h4{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+        margin-bottom: 20px;
+    }
+    h5{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+    }
+    span{
+        font-size: clamp(#{10px}, 6vw, #{18px});
+        margin-top: 5%;
+    }
+    hr{
+        color: $white;
+        width: 100%;
+        margin-top: 80px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    .recap{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        padding-top: 56.25%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    
+    .contact{
+        margin-top: 50px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            gap: 20px;
+            padding-top: 40px;
+            padding-left: 0;
+            // transform: translate(-50%, -50%);
+        }
+        ul li {
+            list-style: none;
+        }
+        ul li a {
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow-y: hidden;
+            border: 3px solid $white;
+            z-index: 1;
+        }
+        ul li a .icon {
+            position: relative;
+            color: $white;
+            transition: .5s;
+            z-index: 3;
+            font-size: 32px;
+            margin-top: 2px;
+            overflow-y: hidden;
+        }
+    
+        ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+    
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+        ul li a:hover:before {
+            top: 0;
+        }
+
+        .fa-brands.fa-instagram.icon{
+            font-size: 35px;
+            line-height: 70px;
+
+        }
+    
+        ul li:nth-child(1) a:before{
+            background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(202.83% 136.37% at 84.50% 113.50%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+        }
+    
+        ul li:nth-child(2) a:before{
+            background: #000;
+        }
+        
+        ul li:nth-child(3) a:before {
+            background: #0077b5;
+        }
+    
+        ul li:nth-child(4) a:before {
+            background: #dd4b39;
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    h1{
+        font-size: clamp(#{42px}, 5vw, #{45px});
+    }
+    h2{
+        font-size: clamp(#{16px}, 5vw, #{18px});
+    }
+    #hero{
+        padding: 40px;
+        .image-float{
+            display: flex;
+            justify-content: center;
+        }
+        .group{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .floating-image{
+            width: 65%;
+        }
+    }
+    #graphic{
+        min-height: 70vh;
+    }
+    footer{
+        padding: 80px;
+    }
+}
+@media screen and (min-width: 600px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 635px) and (max-width: 767px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    #graphic{
+        min-height: 90vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 927px){
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .article{
+        min-height: 50vh;
+        .card-list{
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        }
+    }
+    #graphic{
+        min-height: 100vh;
+    }
+}
+@media screen and (min-width: 880px){
+    .article{
+        .card-list{
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+}
+@media screen and (min-width: 928px){
+    header{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 3px 18px;
+        .nav-links{
+            flex-direction: row;
+            transform: none;
+            z-index: 0;
+            transition: none;
+            justify-content: right;
+            position: relative;
+            background-color: transparent;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            gap: 50px;
+        }
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .burger{
+        display: none;
+    }
+    .article{
+        h3{
+            font-size: 40px;
+        }
+        .card-list{
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+        .card{
+            h5{
+                font-size: 14px;
+            }
+            p{
+                font-size: 16px;
+            }
+            span{
+                font-size: 12px;
+            }
+        }
+    }
+    #graphic{
+        min-height: 100vh;
+    }
+}
+@media screen and (min-width: 1200px){
+    header{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    nav{
+        padding: 10px 25px;
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+    }
+    h1{
+        font-size: clamp(#{58px}, 5vw, #{60px});
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    }
+    h2{
+        font-size: clamp(#{20px}, 5vw, #{22px});
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        width: 80%;
+        line-height: 1.5;
+    }
+    header{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    nav{
+        padding: 10px 25px;
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+    }
+    #hero{
+        padding: 40px 90px;
+        .group{
+            flex-direction: row-reverse;
+            text-align: left;
+        }
+        .floating-image{
+            width: 85%;
+        }
+    }
+    #review{
+        padding: 40px 90px;
+    }
+    #news{
+        padding: 40px 90px;
+    }
+    .article{
+        .card{
+            span{
+                font-size: 14px;
+            }
+            h5{
+                font-size: 16px;
+            }
+        }
+        .card-list{
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            max-width: 1400px;
+        }
+    }
+    #graphic{
+        background-image: url(../images/background/MacBook\ Air\ -\ 2.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 120vh;
+    }
+    footer{
+        min-height: 100vh;
+        padding-left: 350px;
+        padding-right: 350px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        hr{
+            margin-top: 10px;
+        }
+        span{
+            margin-top: 10px;
+        }
+        h4{
+            font-size: clamp(#{40px}, 5vw, #{48px});
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+    }
+}
+@media screen and (min-width: 1600px){
+    header{
+        padding: 10px 90px;
+    }
+    nav{
+        padding: 20px 25px;
+        ul{
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .article{
+        .card-list{
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1400px;
+        }
+    }
+}

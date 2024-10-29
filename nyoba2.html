@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Web Design</a></li>
+                    <li class="dropdown-end">
+                        <a href="#" class="dropbtn-end">Development</a>
+                        <ul class="dropdown-content-end">
+                            <li><a href="#">Front-end</a></li>
+                            <li><a href="#">Back-end</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>

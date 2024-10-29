@@ -1,0 +1,2100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-X: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-heading {
+  font-family: "Inter", sans-serif;
+}
+
+.font-primary {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 38px);
+}
+
+h2 {
+  font-size: clamp(20px, 5vw, 21px);
+}
+
+h3 {
+  font-size: clamp(20px, 5vw, 24px);
+}
+
+h4 {
+  font-size: clamp(10px, 5vw, 18px);
+}
+
+p {
+  font-size: clamp(10px, 4vw, 16px);
+}
+
+.btn-dark-green {
+  background-color: #3B5D50;
+  color: #F5F5F5;
+}
+
+.btn-dark-green:hover {
+  background-color: #CA8239;
+  color: #F5F5F5;
+}
+
+.text-green {
+  color: #0F936D;
+}
+
+.text-dark-green {
+  color: #3B5D50;
+}
+
+.text-light-green {
+  color: #DDE7B8;
+}
+
+.text-orange {
+  color: #CA8239;
+}
+
+.text-dark-blue {
+  color: #123D5B;
+}
+
+.text-darker {
+  color: #1C4839;
+}
+
+.text-dark-orange {
+  color: #8D3503;
+}
+
+.bg-light-blue {
+  background-color: #b4ddf6;
+}
+
+.bg-green {
+  background-color: #0F936D;
+}
+
+.bg-light-green {
+  background-color: #DDE7B8;
+}
+
+.bg-dark-green {
+  background-color: #1C4839;
+}
+
+.bg-light-yellow {
+  background-color: #fadb5d;
+}
+
+.bg-dark-blue {
+  background-color: #123D5B;
+}
+
+.bg-lighter-orange {
+  background-color: #ED9E65;
+}
+
+.bg-tosca {
+  background-color: #57A6A1;
+}
+
+.bg-dark-orange {
+  background-color: #8D3503;
+}
+
+header {
+  overflow: hidden;
+  position: fixed;
+  z-index: 4;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 25px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  border-radius: 38px;
+  width: 90%;
+  justify-content: center;
+}
+nav .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+nav .logo img {
+  width: 15%;
+  height: auto;
+  z-index: 3;
+}
+nav .logo .name {
+  width: 100%;
+  color: black;
+  font-size: 5rem;
+  font-family: "Holtwood One SC", sans-serif;
+}
+nav ul li a {
+  font-size: clamp(12px, 5vw, 16px);
+  color: #000;
+}
+nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 16px 16px 16px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 70px;
+  width: 90%;
+  transform: translateY(-100%);
+  text-align: center;
+  color: black;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+nav .nav-links a:hover {
+  text-decoration: none;
+  color: #0F936D;
+  font-weight: 700;
+}
+nav .nav-links.show {
+  display: flex;
+  transform: translateY(0);
+  top: 0;
+  margin-top: 70px;
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+.burger .line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #0F936D;
+  border-radius: 3px;
+}
+
+.btn-back {
+  background-color: #0F936D;
+  border-radius: 50%;
+  border-color: none;
+  width: 100px;
+  height: 100px;
+  color: #F5F5F5;
+  text-decoration: none;
+  font-size: 50px;
+  margin-top: 10%;
+  margin-left: 90px;
+  border-style: none;
+}
+
+.back-button:hover {
+  background-color: #E8BA01;
+  color: #000;
+}
+
+.hero {
+  padding: 30px;
+}
+
+#medmar {
+  min-height: 100vh;
+  background-image: url(../images/background/medmar.png);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+#medmar h1 {
+  margin-top: 100%;
+}
+#medmar h1, #medmar h2 {
+  text-align: center;
+}
+
+#competition-departement {
+  min-height: 100vh;
+  background-image: url(../images/background/bg-compe2.png);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+#competition-departement h1 {
+  margin-top: 100%;
+}
+#competition-departement h1, #competition-departement h2 {
+  text-align: center;
+}
+
+#finance {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/background/bg-finance.svg);
+}
+#finance h1 {
+  margin-top: 100%;
+}
+#finance h1, #finance h2 {
+  text-align: center;
+}
+
+#implementation {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/background/bg-imple.png);
+}
+#implementation h1 {
+  margin-top: 100%;
+}
+#implementation h1, #implementation h2 {
+  text-align: center;
+}
+
+#education {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/background/bg-edu.png);
+}
+#education h1 {
+  margin-top: 100%;
+}
+#education h1, #education h2 {
+  text-align: center;
+}
+
+#public-relation {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/background/bg-pr.png);
+}
+#public-relation h1 {
+  margin-top: 100%;
+}
+#public-relation h1, #public-relation h2 {
+  text-align: center;
+}
+
+#hr-dep {
+  min-height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/background/people-fotbar.jpg);
+}
+#hr-dep h1 {
+  margin-top: 100%;
+}
+#hr-dep h1, #hr-dep h2 {
+  text-align: center;
+}
+
+#edu-desc .bg-heading {
+  background-color: #fadb5d;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+#edu-desc .bg-caption {
+  background-color: #296A54;
+}
+
+#hr-desc .bg-heading, #finance-desc .bg-heading {
+  background-color: #E8BA01;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+#hr-desc .bg-caption, #finance-desc .bg-caption {
+  background-color: #FFF2B1;
+}
+
+.description {
+  min-height: 100vh;
+  background-color: #F5F5F5;
+}
+.description .caption-heading {
+  padding: 10px 30px;
+}
+.description h2 {
+  font-size: clamp(24px, 5vw, 25px);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.description p {
+  font-size: clamp(12px, 5vw, 14px);
+}
+.description .bg-caption {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.description .bg-heading {
+  padding: 10px 40px;
+  border-radius: 20px;
+  width: fit-content;
+  height: 100%;
+}
+.description .group {
+  margin-top: 20px;
+}
+.description ul li {
+  font-size: 14px;
+}
+.description .element {
+  display: flex;
+  justify-content: center;
+}
+.description .element img {
+  width: 70%;
+}
+
+#medmar-projects.description .bg-caption {
+  background-color: #b4ddf6;
+}
+#medmar-projects.description .bg-heading {
+  background-color: #0D2838;
+}
+
+#compe-desc .bg-caption {
+  background: rgba(128, 200, 121, 0.368);
+}
+#compe-desc .bg-heading {
+  background-color: #F3C622;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#imple-desc .bg-caption {
+  background: rgba(87, 123, 141, 0.23);
+}
+#imple-desc .bg-heading {
+  background-color: #123D5B;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#pr-desc .bg-caption {
+  background-color: rgba(251, 195, 139, 0.5843137255);
+}
+#pr-desc .bg-heading {
+  background-color: #8D3503;
+}
+
+.jobdes {
+  min-height: 50vh;
+  background-color: #F5F5F5;
+  padding: 30px;
+}
+.jobdes h3 {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.jobdes h3 {
+  font-size: clamp(24px, 5vw, 25px);
+}
+.jobdes .accordion {
+  max-width: 1000px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.jobdes .accordion-item {
+  background-color: #F5F5F5;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 30px;
+  width: 100%;
+}
+.jobdes .accordion-item-header {
+  padding: 10px 25px;
+  font-size: 16px;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.jobdes .accordion-item-header::after {
+  content: "+"; /* Kode Unicode untuk ikon FontAwesome fa-angle-down */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  right: 1.5rem;
+  rotate: 180deg;
+}
+.jobdes .accordion-item-header.active::after {
+  content: "-"; /* Kode Unicode untuk ikon FontAwesome fa-angle-down */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.jobdes .accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.jobdes .accordion-item-body-content {
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+.jobdes .bg-light-blue, .jobdes .bg-light-yellow, .jobdes .bg-light-green, .jobdes .bg-lighter-orange {
+  padding: 10px 20px;
+  width: fit-content;
+  height: 100%;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+.jobdes #skill .bg-light-blue, .jobdes #skill .bg-light-yellow, .jobdes #skill .bg-light-green, .jobdes #skill .bg-lighter-orange {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+#jobdes-hr .bg-light-green, #jobdes-hr .bg-light-yellow {
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.past-activity {
+  background-color: #F5F5F5;
+  min-height: 80vh;
+  padding-top: 10px;
+  /* slide effect */
+  /* fade effect */
+  /* slide effect */
+  /* fade effect */
+}
+.past-activity .bg-light-blue, .past-activity .bg-dark-green, .past-activity .bg-dark-blue, .past-activity .bg-light-yellow, .past-activity .bg-dark-orange {
+  padding: 10px 20px;
+}
+.past-activity .bg-light-yellow {
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+}
+.past-activity .bg-yellow {
+  background-color: #E8BA01;
+  padding: 10px 20px;
+}
+.past-activity h2 {
+  font-size: clamp(40px, 5vw, 44px);
+}
+.past-activity h3 {
+  font-size: clamp(26px, 5vw, 28px);
+  text-align: center;
+}
+.past-activity .group {
+  padding: 10px 30px;
+}
+.past-activity .catalyst-poster {
+  width: 60%;
+}
+.past-activity .carousel {
+  padding: 10px 30px;
+  overflow-x: hidden;
+}
+.past-activity .carousel h4 {
+  font-size: clamp(26px, 5vw, 28px);
+}
+.past-activity .carousel_inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.past-activity .carousel_inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.past-activity .carousel_item {
+  position: relative;
+  float: left;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-right: -100%;
+}
+.past-activity .carousel_item__active,
+.past-activity .carousel_item__pos_next {
+  display: block;
+}
+.past-activity .carousel_item__pos_next {
+  left: 100%;
+}
+.past-activity .carousel_item__next {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.past-activity .carousel__fade .carousel_item__pos_next {
+  left: 0;
+  opacity: 0;
+}
+.past-activity .carousel__fade .carousel_item__next {
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.past-activity .carousel__fade .carousel_item__active.carousel_item__next {
+  opacity: 0;
+}
+.past-activity .carousel_img {
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.past-activity .sliding {
+  padding: 10px 30px;
+  overflow-x: hidden;
+}
+.past-activity .sliding h4 {
+  font-size: clamp(26px, 5vw, 28px);
+}
+.past-activity .sliding_inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.past-activity .sliding_inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.past-activity .sliding_item {
+  position: relative;
+  float: left;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-right: -100%;
+}
+.past-activity .sliding_item__active,
+.past-activity .sliding_item__pos_next {
+  display: block;
+}
+.past-activity .sliding_item__pos_next {
+  left: 100%;
+}
+.past-activity .sliding_item__next {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.past-activity .sliding__fade .sliding_item__pos_next {
+  left: 0;
+  opacity: 0;
+}
+.past-activity .sliding__fade .sliding_item__next {
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.past-activity .sliding__fade .sliding_item__active.sliding_item__next {
+  opacity: 0;
+}
+.past-activity .sliding_img {
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.past-activity .group p {
+  text-align: center;
+}
+.past-activity #review .review-heading {
+  align-items: center;
+  justify-content: center;
+}
+.past-activity .vision-mission {
+  flex-direction: column;
+}
+.past-activity .vision-mission .bg-dark-green, .past-activity .vision-mission .bg-dark-blue, .past-activity .vision-mission .bg-light-yellow {
+  border-radius: 30px;
+  width: fit-content;
+}
+.past-activity #comvi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.past-activity .comvi-img {
+  width: 90%;
+}
+.past-activity .deb-poster {
+  width: 60%;
+}
+.past-activity .poster {
+  justify-content: center;
+}
+
+.people {
+  padding: 30px;
+  min-height: 200vh;
+  background: linear-gradient(180deg, #F5F5F5 4%, rgba(185, 160, 107, 0.54) 26%, rgba(179, 221, 193, 0.91) 72.5%, #F5F5F5 94.54%);
+}
+.people .bg-dark-green {
+  padding: 10px 80px;
+  width: fit-content;
+  height: 100%;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+.people .caption-heading {
+  justify-content: center;
+}
+.people .caption-heading span {
+  font-size: 16px;
+}
+.people .group {
+  flex-direction: column;
+}
+.people .role {
+  font-size: 30px;
+}
+.people .role-name {
+  gap: 20px;
+  flex-direction: column;
+}
+.people .role-image {
+  width: 70%;
+}
+.people .head-title {
+  padding: 10px 70px;
+  background-color: #3B5D50;
+  border-radius: 20px;
+  width: fit-content;
+}
+.people span {
+  font-size: 14px;
+}
+.people .directors .head-title {
+  width: 90%;
+}
+.people .managers span {
+  font-size: 14px;
+}
+.people .managers .head-title {
+  padding: 10px 20px;
+  width: 75%;
+}
+.people .managers .role-image {
+  width: 50%;
+}
+.people .managers #noufal {
+  margin-top: 30px;
+}
+.people .managers #awla {
+  margin-top: 10px;
+}
+.people #managers-1 {
+  flex-direction: column;
+}
+.people #managers-2 {
+  flex-direction: column-reverse;
+}
+.people .associates {
+  padding: 20px;
+}
+.people .associates span {
+  font-size: 13px;
+}
+.people .cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px 40px;
+}
+.people .cards-container span {
+  color: #1C4839;
+}
+
+#people-hr .managers .head-title {
+  width: fit-content;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper #left {
+  left: -22px;
+}
+.wrapper #right {
+  right: -22px;
+}
+.wrapper .sosmed {
+  border-radius: 0;
+  position: relative;
+  box-shadow: none;
+  background: transparent;
+}
+.wrapper .slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 105%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider.no-transition {
+  scroll-behavior: auto;
+}
+.slider.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.slider.dragging .cards {
+  cursor: grab;
+  user-select: none;
+}
+.slider :where(.cards, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .cards {
+  scroll-snap-align: center;
+  height: 100%;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  flex-direction: column;
+}
+.slider .cards .caption {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+.slider .cards .img {
+  height: 100%;
+  width: 100%;
+}
+.slider .cards .img img {
+  width: 100%;
+  height: 100%;
+}
+
+#struktur {
+  min-height: 50vh;
+  padding: 0px 30px 10px 30px;
+  background-color: #F5F5F5;
+}
+#struktur h3 {
+  font-size: clamp(24px, 5vw, 30px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+#struktur .gallery {
+  width: 100%;
+  height: 100%;
+  margin-top: 30%;
+}
+#struktur img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#struktur .gallery-container {
+  align-items: center;
+  display: flex;
+  height: 80%;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+#struktur .gallery-item {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  width: 50%;
+  z-index: 0;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+#struktur .gallery-item-1 {
+  left: 15%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-2, #struktur .gallery-item-4 {
+  height: auto;
+  opacity: 0.8;
+  width: 50%;
+  z-index: 1;
+}
+#struktur .gallery-item-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: auto;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2;
+}
+#struktur .gallery-item-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-5 {
+  left: 80%;
+  opacity: 5;
+  transform: translateX(-50%);
+}
+#struktur .gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 90px;
+  margin-top: -10%;
+  position: sticky;
+  z-index: 8;
+  gap: 50px;
+}
+#struktur .gallery-controls button {
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 30px 100px;
+  padding: 25px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fadb5d;
+  color: #000;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+#struktur .gallery-controls-button:focus {
+  outline: none;
+}
+#struktur .gallery-controls-previous {
+  position: relative;
+}
+#struktur .gallery-controls-previous::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transition: left 0.15 ease-in-out;
+  width: 5px;
+}
+#struktur .gallery-controls-previous:hover::before {
+  left: -40px;
+}
+#struktur .gallery-controls-next {
+  position: relative;
+}
+#struktur .gallery-controls-next::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  right: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  transition: left 0.15 ease-in-out;
+  width: 5px;
+}
+#struktur .gallery-controls-next:hover::before {
+  right: -40px;
+}
+#struktur .gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+#struktur .gallery-nav li {
+  background: #f5f5f5;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 16px;
+}
+#struktur .gallery-nav li.gallery-item-selected {
+  background: #555;
+}
+
+#graphic {
+  min-height: 50svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background/bg-macbook.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #1C4839;
+  padding: 30px;
+  min-height: 100vh;
+}
+footer h4 {
+  font-size: clamp(20px, 6vw, 32px);
+  margin-bottom: 20px;
+}
+footer h5 {
+  font-size: clamp(20px, 6vw, 32px);
+}
+footer span {
+  font-size: clamp(10px, 6vw, 18px);
+  margin-top: 5%;
+}
+footer hr {
+  color: #F5F5F5;
+  width: 100%;
+  margin-top: 80px;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer .recap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+}
+footer .recap iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+footer .contact {
+  margin-top: 50px;
+}
+footer .contact ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 20px;
+  padding-top: 40px;
+  padding-left: 0;
+}
+footer .contact ul li {
+  list-style: none;
+}
+footer .contact ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 100px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow-y: hidden;
+  border: 3px solid #F5F5F5;
+  z-index: 1;
+}
+footer .contact ul li a .icon {
+  position: relative;
+  color: #F5F5F5;
+  transition: 0.5s;
+  z-index: 3;
+  font-size: 32px;
+  margin-top: 2px;
+  overflow-y: hidden;
+}
+footer .contact ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+footer .contact ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+footer .contact ul li a:hover:before {
+  top: 0;
+}
+footer .contact .fa-brands.fa-instagram.icon {
+  font-size: 35px;
+  line-height: 70px;
+}
+footer .contact ul li:nth-child(1) a:before {
+  background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0) 100%), radial-gradient(202.83% 136.37% at 84.5% 113.5%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+}
+footer .contact ul li:nth-child(2) a:before {
+  background: #000;
+}
+footer .contact ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+footer .contact ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+@media screen and (min-width: 500px) {
+  nav .logo img {
+    width: 10%;
+  }
+  .description .caption-heading {
+    padding: 20px 30px;
+  }
+  .description .element img {
+    width: 50%;
+  }
+  #medmar h1, #education h1, #public-relation h1, #finance h1 {
+    margin-top: 70%;
+  }
+  #competition-departement h1 {
+    margin-top: 70%;
+  }
+  #implementation h1 {
+    margin-top: 70%;
+  }
+  .jobdes .accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes .accordion {
+    width: 60%;
+  }
+  .jobdes .accordion-item-body-content {
+    padding: 15px 40px;
+  }
+  .past-activity .carousel_inner {
+    width: 100%;
+  }
+  .past-activity .deb-poster {
+    width: 50%;
+  }
+  #struktur {
+    padding-bottom: 100px;
+    min-height: 60vh;
+  }
+  #struktur .gallery-controls {
+    margin-top: -10%;
+    gap: 150px;
+  }
+  #struktur .gallery-controls button {
+    padding: 25px 20px;
+  }
+  #graphic {
+    min-height: 70vh;
+  }
+  footer {
+    padding: 80px;
+  }
+  .people span {
+    font-size: 16px;
+  }
+  .people .head-title {
+    padding: 10px 80px;
+  }
+  .people .role-image {
+    width: 55%;
+  }
+  .people .directors .head-title {
+    width: 70%;
+  }
+  .people .managers .role-image {
+    width: 40%;
+  }
+  .people .managers span {
+    font-size: 14px;
+  }
+  .people .managers .head-title {
+    width: 60%;
+  }
+  .people .associates span {
+    font-size: 14px;
+  }
+  .people .slider {
+    grid-auto-columns: 100%;
+  }
+  .people .cards-container {
+    padding: 10px 90px;
+  }
+  .people .caption {
+    padding: 5px 10px;
+  }
+}
+@media screen and (min-width: 575px) {
+  .people .cards-container {
+    padding: 10px 120px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 600px) {
+  .people .cards-container {
+    padding: 10px 120px;
+  }
+  .people .role-image {
+    width: 40%;
+  }
+  .people .directors .head-title {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 601px) {
+  #medmar h1, #education h1 {
+    margin-top: 60%;
+  }
+  #competition-departement h1 {
+    margin-top: 60%;
+  }
+  #implementation h1 {
+    margin-top: 60%;
+  }
+  .people .cards-container {
+    padding: 10px 130px;
+  }
+  .people .role-image {
+    width: 40%;
+  }
+  .people .directors .head-title {
+    width: 55%;
+  }
+  #struktur #gallery {
+    margin-top: 20%;
+  }
+  #struktur .bagan {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 700px) {
+  #struktur {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 756px) {
+  .people .cards-container {
+    padding: 10px 200px;
+  }
+}
+@media screen and (min-width: 635px) and (max-width: 767px) {
+  nav .logo img {
+    width: 10%;
+  }
+  #medmar h1, #education h1, #public-relation h1, #finance h1 {
+    margin-top: 60%;
+  }
+  #competition-departement h1 {
+    margin-top: 60%;
+  }
+  #implementation h1 {
+    margin-top: 60%;
+  }
+  .description .element img {
+    width: 40%;
+  }
+  .jobdes .containers {
+    margin-top: 10%;
+  }
+  .jobdes .accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes .accordion {
+    width: 60%;
+  }
+  .jobdes .accordion-item-body-content {
+    padding: 15px 20px;
+  }
+  .past-activity .carousel_inner {
+    width: 60%;
+    margin-left: 20%;
+  }
+  .people {
+    min-height: 70vh;
+  }
+  .people .managers .role-image {
+    width: 30%;
+  }
+  .people .managers .head-title {
+    width: 90%;
+  }
+  .people #managers-1 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .people #managers-1 .role-image {
+    width: 70%;
+  }
+  .people #managers-1 #noufal {
+    margin-top: 8px;
+  }
+  .people #managers-2 {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .people #managers-2 .role-image {
+    width: 70%;
+  }
+  .people #managers-2 #putu {
+    margin-top: 5px;
+  }
+  .people .associates span {
+    font-size: 14px;
+  }
+  #people-hr #managers-1, #people-hr #managers-2 {
+    flex-direction: column;
+  }
+  #people-hr #managers-1 .role-image, #people-hr #managers-2 .role-image {
+    width: 35%;
+  }
+  #struktur {
+    padding-bottom: 120px;
+  }
+  #struktur .gallery {
+    margin-top: 30%;
+  }
+  #struktur .gallery-controls {
+    margin-top: -10%;
+    gap: 250px;
+  }
+  #struktur .bagan {
+    margin-top: 50px;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 927px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  nav .logo img {
+    width: 10%;
+  }
+  #medmar h1, #education h1, #public-relation h1, #finance h1 {
+    margin-top: 60%;
+  }
+  #competition-departement h1, #implementation h1 {
+    margin-top: 60%;
+  }
+  .description {
+    min-height: 50vh;
+  }
+  .description h2 {
+    font-size: clamp(30px, 5vw, 34px);
+  }
+  .description .bg-heading {
+    font-size: 20px;
+  }
+  .description .bg-caption {
+    padding: 20px 50px;
+  }
+  .description p {
+    font-size: 20px;
+  }
+  .description ul {
+    width: 80%;
+  }
+  .description ul li {
+    font-size: 16px;
+  }
+  .description .element img {
+    width: 40%;
+  }
+  .description .group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes {
+    min-height: 30vh;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .jobdes h3 {
+    font-size: clamp(30px, 5vw, 34px);
+  }
+  .jobdes span {
+    font-size: 20px;
+  }
+  .jobdes .accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes .accordion-item-header {
+    font-size: 20px;
+  }
+  .jobdes .accordion {
+    width: 60%;
+  }
+  .jobdes .accordion-item-body-content {
+    padding: 15px 20px;
+  }
+  .jobdes #doing .bg-light-blue, .jobdes #doing .bg-light-yellow, .jobdes #doing .bg-light-green, .jobdes #doing .bg-lighter-orange {
+    font-size: 16px;
+  }
+  .jobdes #skill .bg-light-blue, .jobdes #skill .bg-light-yellow, .jobdes #skill .bg-light-green, .jobdes #skill .bg-lighter-orange {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .past-activity {
+    min-height: 50vh;
+  }
+  .past-activity h3 {
+    font-size: clamp(30px, 5vw, 34px);
+    text-align: end;
+  }
+  .past-activity p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .past-activity .bg-light-blue {
+    padding: 10px 50px;
+  }
+  .past-activity .bg-dark-green, .past-activity .bg-dark-blue, .past-activity .bg-dark-orange {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .past-activity .group {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+  }
+  .past-activity #catalyst, .past-activity #deb {
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .past-activity #catalyst p, .past-activity #deb p {
+    font-size: 12px;
+  }
+  .past-activity #comvi {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .past-activity #comvi p {
+    font-size: 16px;
+  }
+  .past-activity #review {
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .past-activity #review p {
+    font-size: 14px;
+  }
+  .past-activity #review .review-heading {
+    align-items: center;
+  }
+  .past-activity .comvi-img {
+    width: 45%;
+  }
+  .past-activity .carousel_inner {
+    margin-left: 0;
+  }
+  .past-activity .vision-mission {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .past-activity .vision-mission .bg-dark-green, .past-activity .vision-mission .bg-dark-blue {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .past-activity .catalyst-caption, .past-activity .deb-caption {
+    width: 60%;
+  }
+  .past-activity .deb-poster {
+    width: 100%;
+  }
+  .past-activity .poster {
+    justify-content: start;
+    width: 30%;
+  }
+  .past-activity .poster .catalyst-poster {
+    width: 100%;
+    height: 100%;
+  }
+  .people {
+    min-height: 150vh;
+    padding: 50px;
+  }
+  .people span {
+    font-size: 14px;
+  }
+  .people .directors .role-name {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .people .directors #ikhsan .role-image, .people .directors #ghifari .role-image, .people .directors #ken .role-image, .people .directors #vanny .role-image, .people .directors #meico .role-image {
+    width: 40%;
+  }
+  .people .directors #ikhsan .head-title, .people .directors #ghifari .head-title, .people .directors #ken .head-title, .people .directors #vanny .head-title, .people .directors #meico .head-title {
+    width: 45%;
+  }
+  .people .directors .role-image {
+    width: 70%;
+  }
+  .people .directors .head-title {
+    width: 80%;
+    font-size: 14px;
+  }
+  .people .managers .role-image {
+    width: 30%;
+  }
+  .people .managers .head-title {
+    width: 80%;
+  }
+  .people #managers-1 {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .people #managers-1 #noufal {
+    margin-top: 10px;
+  }
+  .people #managers-1 #noufal .role-image {
+    width: 50%;
+  }
+  .people #managers-1 .role-image {
+    width: 50%;
+  }
+  .people #managers-2 {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .people #managers-2 #putu {
+    margin-top: 3px;
+  }
+  .people #managers-2 #putu .role-image {
+    width: 50%;
+  }
+  .people #managers-2 .role-image {
+    width: 50%;
+  }
+  .people .associates span {
+    font-size: 14px;
+  }
+  .people .cards-container {
+    padding: 10px 180px;
+  }
+  .wrapper .carousel {
+    grid-auto-columns: calc(50% - 9px);
+  }
+  #struktur {
+    padding-bottom: 200px;
+  }
+  #struktur .gallery-controls {
+    gap: 400px;
+    padding: 40px 35px;
+  }
+  #struktur .bagan {
+    margin-top: 50px;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 770px) {
+  .people .cards-container {
+    padding: 10px 200px;
+  }
+}
+@media screen and (min-width: 790px) {
+  .people .cards-container {
+    padding: 10px 200px;
+  }
+}
+@media screen and (min-width: 855px) {
+  .people .cards-container {
+    padding: 10px 40px;
+  }
+  .people .slider {
+    grid-auto-columns: 110%;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 855px) {
+  .people .cards-container {
+    padding: 10px 280px;
+  }
+}
+@media screen and (min-width: 928px) {
+  h1 {
+    font-size: clamp(50px, 5vw, 53px);
+  }
+  h2 {
+    font-size: clamp(30px, 5vw, 32px);
+  }
+  h3 {
+    font-size: clamp(30px, 5vw, 34px);
+  }
+  header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  nav {
+    justify-content: center;
+    align-items: center;
+    padding: 3px 18px;
+  }
+  nav .nav-links {
+    flex-direction: row;
+    transform: none;
+    z-index: 0;
+    transition: none;
+    justify-content: right;
+    position: relative;
+    background-color: transparent;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    gap: 50px;
+  }
+  nav .logo img {
+    width: 20%;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .burger {
+    display: none;
+  }
+  .hero {
+    padding: 50px;
+  }
+  #medmar h1, #competition-departement h1, #implementation h1, #education h1, #public-relation h1, #hr-dep h1, #finance h1 {
+    margin-top: 30%;
+  }
+  .description {
+    min-height: 50vh;
+  }
+  .description h2 {
+    font-size: clamp(40px, 5vw, 42px);
+  }
+  .description p {
+    font-size: 20px;
+  }
+  .description .bg-caption {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+  }
+  .description .bg-heading {
+    font-size: 20px;
+  }
+  .description .group {
+    display: flex;
+    flex-direction: row;
+  }
+  .description ul {
+    width: 80%;
+  }
+  .description ul li {
+    font-size: 16px;
+  }
+  .description .element {
+    display: block;
+    width: 50%;
+  }
+  .description .element img {
+    width: 80%;
+  }
+  .jobdes {
+    min-height: 30vh;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .jobdes h3 {
+    font-size: clamp(40px, 5vw, 44px);
+  }
+  .jobdes span {
+    font-size: 20px;
+  }
+  .jobdes .accordion-item-header {
+    font-size: 20px;
+    padding: 20px 25px;
+  }
+  .jobdes #doing .bg-light-blue, .jobdes #doing .bg-light-green, .jobdes #doing .bg-light-yellow, .jobdes #doing .bg-lighter-orange {
+    font-size: 20px;
+  }
+  .jobdes #skill .bg-light-blue, .jobdes #skill .bg-light-green, .jobdes #skill .bg-light-yellow, .jobdes #skill .bg-lighter-orange {
+    font-size: 20px;
+  }
+  .jobdes #struktur {
+    padding: 0px 60px 300px 60px;
+  }
+  .jobdes #struktur h3 {
+    font-size: 40px;
+  }
+  .jobdes #struktur .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes #struktur .gallery-controls {
+    gap: 600px;
+  }
+  .jobdes #struktur .gallery-controls button {
+    margin-top: 60px;
+    padding: 35px 25px;
+    font-size: 30px;
+  }
+  .jobdes #struktur .bagan {
+    margin-top: 100px;
+    width: 60%;
+  }
+  .past-activity {
+    min-height: 50vh;
+  }
+  .past-activity h3 {
+    text-align: end;
+    margin-right: 90px;
+  }
+  .past-activity .group {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2%;
+  }
+  .past-activity .group p {
+    font-size: 20px;
+  }
+  .past-activity #deb .bg-dark-blue {
+    font-size: 14px;
+  }
+  .past-activity .vision-mission {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .past-activity .vision-mission .bg-dark-green, .past-activity .vision-mission .bg-dark-blue {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .past-activity #catalyst, .past-activity #deb, .past-activity #review {
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .past-activity #catalyst p, .past-activity #deb p, .past-activity #review p {
+    font-size: 14px;
+  }
+  .past-activity .catalyst-caption, .past-activity .deb-caption {
+    width: 60%;
+  }
+  .past-activity .poster {
+    justify-content: start;
+    width: 30%;
+  }
+  .past-activity .poster .catalyst-poster {
+    width: 100%;
+    height: 100%;
+  }
+  .past-activity #comvi {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .past-activity #comvi p {
+    font-size: 16px;
+  }
+  .past-activity #review {
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 50px;
+  }
+  .past-activity #review p {
+    font-size: 14px;
+  }
+  .past-activity #review .review-heading {
+    align-items: center;
+  }
+  .past-activity .deb-poster {
+    width: 100%;
+  }
+  .past-activity .comvi-img {
+    width: 45%;
+  }
+  #imple-desc ul {
+    width: 100%;
+  }
+  #imple-desc .group {
+    align-items: center;
+  }
+  #people-imple .directors .role-image {
+    width: 90%;
+  }
+  #people-imple .directors #ikhsan .role-image {
+    width: 35%;
+  }
+  #people-imple .directors #ikhsan .head-title {
+    width: 40%;
+  }
+  .people {
+    padding: 50px;
+    min-height: 120vh;
+  }
+  .people .head-title {
+    padding: 10px 30px;
+  }
+  .people .caption-heading span {
+    font-size: 24px;
+  }
+  .people .role {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+  .people .directors .role-name {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 180px;
+  }
+  .people .directors .role-image {
+    width: 70%;
+  }
+  .people .directors .head-title {
+    width: 80%;
+  }
+  .people .directors #ghifari .role-image, .people .directors #ken .role-image, .people .directors #vanny .role-image, .people .directors #meico .role-image {
+    width: 30%;
+  }
+  .people .directors #ghifari .head-title, .people .directors #ken .head-title, .people .directors #vanny .head-title, .people .directors #meico .head-title {
+    width: 30%;
+  }
+  .people .managers .head-title {
+    width: 60%;
+  }
+  .people .managers #noufal {
+    margin-top: 0;
+  }
+  .people .managers .role-image {
+    width: 55%;
+  }
+  .people #managers-1 {
+    flex-direction: row;
+  }
+  .people #managers-2 {
+    flex-direction: row;
+  }
+  .people .wrapper .slider {
+    grid-auto-columns: calc(33.3333333333% - 15px);
+  }
+  .people .wrapper #left {
+    left: -15px;
+  }
+  .people .cards-container {
+    padding: 10px 120px;
+  }
+  #people-hr #managers-2 {
+    justify-content: center;
+    align-items: center;
+  }
+  #struktur .gallery-controls {
+    gap: 600px;
+  }
+  #struktur .gallery-controls button {
+    padding: 35px 25px;
+    margin-top: 0;
+  }
+  #graphic {
+    min-height: 100vh;
+    background-image: url("../images/background/bg-macbook.svg");
+  }
+  footer {
+    padding: 50px 250px;
+  }
+  footer h4 {
+    font-size: clamp(45px, 5vw, 50px);
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  nav {
+    padding: 10px 25px;
+  }
+  nav .logo img {
+    width: 15%;
+  }
+  #medmar, #competition-departement, #implementation, #education, #public-relation, #hr-dep, #finance {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px 90px;
+  }
+  #medmar h1, #medmar h2, #education h1, #education h2 {
+    text-align: start;
+  }
+  #competition-departement h1, #competition-departement h2, #implementation h1, #implementation h2, #public-relation h1, #public-relation h2, #hr-dep h1, #hr-dep h2, #finance h1, #finance h2 {
+    text-align: start;
+  }
+  h1 {
+    font-size: clamp(40px, 5vw, 43px);
+  }
+  h2 {
+    font-size: clamp(30px, 5vw, 32px);
+  }
+  .description .caption-heading {
+    padding: 40px 90px;
+  }
+  .description .bg-caption {
+    padding: 40px 110px;
+  }
+  .description ul li {
+    font-size: 20px;
+  }
+  .description .element img {
+    width: 80%;
+  }
+  #imple-desc ul {
+    margin-top: 3%;
+  }
+  #imple-desc .element img {
+    width: 90%;
+  }
+  .jobdes {
+    padding: 50px 90px;
+  }
+  .jobdes .caption-heading {
+    justify-content: center;
+    align-items: center;
+  }
+  .jobdes .caption-heading span {
+    width: 100%;
+  }
+  .past-activity {
+    min-height: 100vh;
+  }
+  .past-activity #catalyst p {
+    font-size: 20px;
+  }
+  .past-activity #catalyst .bg-dark-green {
+    font-size: 20px;
+  }
+  .past-activity #deb p, .past-activity #review p {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .past-activity .group {
+    padding: 10px 90px;
+  }
+  .past-activity .carousel {
+    padding: 10px 130px;
+  }
+  .past-activity .vision-mission {
+    margin-top: 40px;
+  }
+  .past-activity #comvi {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .past-activity #comvi p {
+    font-size: 20px;
+  }
+  .past-activity #review {
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .past-activity #review p {
+    font-size: 14px;
+  }
+  .past-activity #review .review-heading {
+    align-items: center;
+  }
+  #people-imple .directors #ikhsan .role-image {
+    width: 35%;
+  }
+  #people-imple .directors #ikhsan .head-title {
+    width: 35%;
+  }
+  .people .directors .role-image {
+    width: 50%;
+  }
+  .people .directors .head-title {
+    width: 60%;
+  }
+  .people .directors #ghifari .role-image, .people .directors #ken .role-image, .people .directors #vanny .role-image, .people .directors #meico .role-image {
+    width: 35%;
+  }
+  .people .directors #ghifari .head-title, .people .directors #ken .head-title, .people .directors #vanny .head-title, .people .directors #meico .head-title {
+    width: 35%;
+  }
+  .people .managers .role-image {
+    width: 40%;
+  }
+  .people .managers .head-title {
+    width: 50%;
+  }
+  .people .cards-container {
+    padding: 10px 250px;
+  }
+  #people-hr #managers-2 {
+    justify-content: center;
+    align-items: center;
+  }
+  #struktur {
+    min-height: 100vh;
+  }
+  #struktur .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #struktur h3 {
+    font-size: clamp(40px, 5vw, 44px);
+  }
+  #struktur .gallery {
+    width: 70%;
+    height: auto;
+    margin-top: 20%;
+  }
+  #struktur .gallery-controls {
+    gap: 600px;
+    margin-top: 0;
+  }
+  #graphic {
+    min-height: 160vh;
+    background-image: url("../images/background/bg-macbook.svg");
+  }
+}
+@media screen and (min-width: 1600px) {
+  header {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  nav {
+    padding: 10px 25px;
+  }
+  nav .logo img {
+    width: 15%;
+  }
+  .description h2 {
+    font-size: clamp(40px, 5vw, 50px);
+  }
+  .description p {
+    font-size: 24px;
+  }
+  .description .bg-heading {
+    font-size: 25px;
+  }
+  .jobdes h3 {
+    font-size: 44px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  .past-activity h2 {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  .past-activity h3 {
+    font-size: 34px;
+  }
+  .past-activity .group p {
+    font-size: 25px;
+  }
+  .past-activity .carousel {
+    padding: 10px 180px;
+  }
+  .past-activity .catalyst-caption {
+    width: 70%;
+  }
+  .people span {
+    font-size: 20px;
+  }
+  .people .managers span {
+    font-size: 18px;
+  }
+  .people .associates span {
+    font-size: 16px;
+  }
+  footer {
+    padding: 50px 410px;
+  }
+}/*# sourceMappingURL=departement.css.map */

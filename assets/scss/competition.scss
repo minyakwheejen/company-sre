@@ -1,0 +1,1081 @@
+@import 'variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.font-heading{
+    font-family: "Inter", sans-serif;
+}
+.font-primary{
+    font-family: "Poppins", sans-serif;
+}
+
+.text-gradient{
+    background: linear-gradient(180deg, #0F936D 30.6%, #DDE7B8 85.3%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1{
+    font-size: clamp(#{45px}, 5vw, #{48px});
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+h2{
+    font-size: clamp(#{30px}, 5vw, #{32px});
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+h3{
+    font-size: clamp(#{28px}, 5vw, #{32px});
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+h4{
+    font-size: clamp(#{10px}, 5vw, #{18px});
+}
+p{
+    font-size: clamp(#{10px}, 4vw, #{16px});
+    margin-bottom: 0;
+}
+.btn-dark-green{
+    background-color: $secondary;
+    color: $white;
+}
+.btn-dark-green:hover{
+    background-color: $orange;
+    color: $white;
+}
+.text-primary{
+    color: $primary;
+}
+.text-dark-green{
+    color: $secondary;
+}
+.text-light-green{
+    color: $light-green;
+}
+.text-orange{
+    color: $orange;
+}
+.bg-dark-green{
+    background-color: $darker;
+}
+.bg-light-yellow{
+    background-color: $light-yellow;
+}
+.bg-light-green{
+    background-color: $light-green;
+}
+.bg-gray{
+    background-color: $gray;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+// style navbar
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 25px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    border-radius: 38px;
+    width: 90%;
+    justify-content: center;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        img{
+            width: 15%;
+            height: auto;
+            z-index: 3;
+        }
+        .name{
+            width: 100%;
+            color: black;
+            font-size: 5rem;
+            font-family: 'Holtwood One SC', sans-serif;
+        }
+    }
+
+    ul li a{
+        font-size: clamp(#{12px}, 5vw, #{16px});
+        color: #000;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        padding: 70px 16px 16px 16px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        gap: 70px;
+        width: 90%;
+        transform: translateY(-100%);
+        text-align: center;
+        color: black;
+        transition: all 0.5s ease;
+        z-index: 2;
+        
+        a:hover{
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .nav-links.show{
+        display: flex;
+        transform: translateY(0);
+        top: 0;
+        margin-top: 70px;
+    }
+}
+
+.burger{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 2;
+
+    .line{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: $primary;
+        border-radius: 3px;
+    }
+}
+#hero{
+    padding: 30px;
+    min-height: 100vh;
+    background-image: url(../images/background/bg-compe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h1, h2{
+        text-align: center;
+    }
+    .group{
+        flex-direction: column-reverse;
+    }
+    .caption-heading{
+        margin-top: 40px;
+    }
+
+    .floating-image{
+        width: 75%;
+        height: 100%;
+        position: relative;
+        animation: floatAnimation 3s ease-in-out infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .floating-text{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        // animation: floatAnimation 3s ease-in-out infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes floatAnimation {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+    }
+}
+#description{
+    min-height: 100vh;
+    padding: 30px;
+    background-color: $white;
+    .containers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bg-dark-green{
+        padding: 10px 30px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+    }
+    span{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+    }
+    ul{
+        margin-top: 20px;
+        li{
+            font-size: 14px;
+        }
+        .col-md-8{
+            margin-left: 20px;
+        }
+    }
+    .chess{
+        img{
+            width: 60%;
+        }
+    }
+    p{
+        margin-bottom: 10px;
+    }
+}
+.type-competition{
+    .group{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .caption{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    .bg-gray, .bg-dark-green{
+        padding: 10px 20px;
+        width: fit-content;
+        font-size: 16px;
+    }
+    .caption-heading-1{
+        justify-content: center;
+        align-items: center;
+    }
+    .caption-heading-2{
+        justify-content: center;
+        align-items: center;
+    }
+    .caption-heading-3{
+        justify-content: center;
+        align-items: center;
+    }
+    .vision-mission{
+        flex-direction: column;
+        padding: 0px 30px;
+        justify-content: center;
+    }
+}
+#catalyst{
+    min-height: 100vh;
+    background-image: url(../images/background/Group\ 302.svg);
+    background-size: cover;
+    background-position: center;
+    .bg-light-yellow{
+        padding: 10px 20px;
+    }
+    .group{
+        flex-direction: column;
+        padding: 20px 30px;
+        align-items: center;
+    }
+    .caption{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+    .bg-gray, .bg-dark-green{
+        padding: 10px 20px;
+        width: fit-content;
+        font-size: 16px;
+    }
+    .caption-heading-1{
+        justify-content: center;
+        align-items: center;
+    }
+    .caption-heading-2{
+        justify-content: center;
+        align-items: center;
+    }
+    .caption-heading-3{
+        justify-content: center;
+        align-items: center;
+    }
+    .vision-mission{
+        flex-direction: column;
+        padding: 0px 30px;
+        justify-content: center;
+    }
+    .element{
+        width: 100%;
+        height: auto;
+    }
+}
+#timeline{
+    padding: 40px;
+    min-height: 120vh;
+    background: linear-gradient(180deg, #f5f5f5 1.37%, rgba(240, 173, 42, 0.06) 16.79%, rgba(224, 208, 58, 0.28) 78.78%, #F5F5F5 93.22%);
+    .containers{
+        flex-direction: column;
+    }
+    .caption-heading{
+        flex-direction: column;
+    }
+    h3{
+        color: $orange;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: clamp(#{36px}, 5vw, #{38px});
+    }
+    h4{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .btn-dark-green{
+        width: fit-content;
+        height: 100%;
+        padding: 10px 20px;
+        color: $white;
+
+    }
+    .btn-dark-green:hover{
+        background-color: $light-yellow;
+        color: #000;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+#reveal{
+    min-height: 200vh;
+    // background-color: $white;
+    padding-bottom: 50px;
+    background-image: url(../images/background/reveal2.svg);
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    .bg-light-green{
+        padding: 10px 20px;
+    }
+    .caption{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .caption-heading{
+        flex-direction: column;
+    }
+    h4{
+        font-size: 20px;
+    }
+}
+#reveal.type-competition{
+    .group{
+        padding: 10px 30px;
+    }
+    .caption{
+        text-shadow: none;
+        font-weight: 500;
+    }
+}
+
+#graphic{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/background/bg-macbook.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+footer{
+    background-color: $darker;
+    padding: 30px;
+    min-height: 100vh;
+    h4{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+        margin-bottom: 20px;
+    }
+    h5{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+    }
+    span{
+        font-size: clamp(#{10px}, 6vw, #{18px});
+        margin-top: 5%;
+    }
+    hr{
+        color: $white;
+        width: 100%;
+        margin-top: 80px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    .recap{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        padding-top: 56.25%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    
+    .contact{
+        margin-top: 50px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            gap: 20px;
+            padding-top: 40px;
+            padding-left: 0;
+            // transform: translate(-50%, -50%);
+        }
+        ul li {
+            list-style: none;
+        }
+        ul li a {
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow-y: hidden;
+            border: 3px solid $white;
+            z-index: 1;
+        }
+        ul li a .icon {
+            position: relative;
+            color: $white;
+            transition: .5s;
+            z-index: 3;
+            font-size: 32px;
+            margin-top: 2px;
+            overflow-y: hidden;
+        }
+    
+        ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+    
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+        ul li a:hover:before {
+            top: 0;
+        }
+
+        .fa-brands.fa-instagram.icon{
+            font-size: 35px;
+            line-height: 70px;
+
+        }
+    
+        ul li:nth-child(1) a:before{
+            background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(202.83% 136.37% at 84.50% 113.50%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+        }
+    
+        ul li:nth-child(2) a:before{
+            background: #000;
+        }
+        
+        ul li:nth-child(3) a:before {
+            background: #0077b5;
+        }
+    
+        ul li:nth-child(4) a:before {
+            background: #dd4b39;
+        }
+    }
+}
+@media screen and (min-width: 500px){
+    #hero{
+        .floating-image{
+            width: 60%;
+        }
+    }
+    #description{
+        .chess{
+            img{
+                width: 50%;
+            }
+        }
+    }
+    #catalyst{
+        h3{
+            font-size: clamp(#{34px}, 5vw, #{36px});
+        }
+        span{
+            font-size: clamp(#{20px}, 5vw, #{24px});
+        }
+        .element{
+            width: 70%;
+        }
+    }
+    #timeline{
+        img{
+            width: 70%;
+        }
+    }
+    #reveal{
+        h3{
+            font-size: clamp(#{34px}, 5vw, #{36px});
+        }
+        span{
+            font-size: clamp(#{20px}, 5vw, #{24px});
+        }
+    }
+    #graphic{
+        min-height: 80vh;
+    }
+}
+@media screen and (min-width: 600px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 635px) and (max-width: 767px) {
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    #timeline{
+        img{
+            width: 60%;
+        }
+    }
+    #graphic{
+        min-height: 80vh;
+    }
+    #reveal{
+        .bg-light-yellow{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 927px) {
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    #hero{
+        padding: 50px;
+        .group{
+            justify-content: center;
+            align-items: center;
+        }
+        .caption-heading{
+            text-align: center;
+        }
+        .floating-image{
+            width: 45%;
+        }
+    }
+    #description{
+        padding: 50px;
+        min-height: 60vh;
+        .output{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .chess{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        ul{
+            li{
+                margin-left: 0;
+            }
+        }
+    }
+    #catalyst{
+        min-height: 70vh;
+        .group{
+            padding: 20px 30px;
+        }
+        .vision-mission{
+            flex-direction: row;
+            padding: 0px 30px;
+            justify-content: center;
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    #timeline{
+        padding: 50px;
+        .containers{
+            flex-direction: row;
+            flex-direction: column;
+        }
+        img{
+            width: 50%;
+        }
+        .group{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    #reveal{
+        min-height: 120vh;
+        .vision-mission{
+            .caption-heading{
+                flex-direction: row;
+            }
+            
+        }
+        #scc.caption-heading{
+            #lottie-animation{
+                width: 40%;
+            }
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        #ipc.caption-heading{
+            flex-direction: row-reverse;
+            margin-top: 30px;
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    #reveal.type-competition{
+        .group{
+            padding: 10px 50px;
+        }
+    }
+    #graphic{
+        min-height: 80vh;
+    }
+
+}
+@media screen and (min-width: 928px){
+    h1{
+        font-size: clamp(#{60px}, 5vw, #{62px});
+    }
+    h2{
+        font-size: clamp(#{50px}, 5vw, #{52px});
+    }
+    header{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 3px 18px;
+        .nav-links{
+            flex-direction: row;
+            transform: none;
+            z-index: 0;
+            transition: none;
+            justify-content: right;
+            position: relative;
+            background-color: transparent;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            gap: 50px;
+        }
+        .logo{
+            img{
+                width: 20%;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .burger{
+        display: none;
+    }
+    #hero{
+        padding: 20px 90px;
+        .group{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .floating-image{
+            width: 100%;
+        }
+    }
+    #description{
+        padding: 50px;
+        min-height: 50svh;
+        .output{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        span{
+            font-size: 20px;
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .chess{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+        ul{
+            li{
+                margin-left: 0;
+                font-size: 16px;
+            }
+        }
+        .col-md-2{
+            width: 10%;
+        }
+    }
+    #catalyst{
+        min-height: 80svh;
+        .group{
+            flex-direction: row;
+            padding: 50px;
+        }
+        .caption-heading-1{
+            justify-content: center;
+            align-items: end;
+            .caption{
+                text-align: end;
+            }
+        }
+        .vision-mission{
+            flex-direction: row;
+            padding-bottom: 50px;
+        }
+        .caption{
+            width: 90%;
+        }
+        .element{
+            width: 40%;
+        }
+    }
+    #timeline{
+        min-height: 80svh;
+        padding: 50px;
+        .group{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        img{
+            width: 40%;
+        }
+        h3{
+            font-size: 40px;
+        }
+        h4{
+            font-size: 30px;
+        }
+    }
+    #reveal{
+        min-height: 100vh;
+        .vision-mission{
+            .caption-heading{
+                flex-direction: row;
+            }
+            
+        }
+        #scc.caption-heading{
+            #lottie-animation{
+                width: 40%;
+            }
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        #ipc.caption-heading{
+            flex-direction: row-reverse;
+            margin-top: 30px;
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    #reveal.type-competition{
+        .group{
+            padding: 10px 50px;
+        }
+    }
+    #graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 80vh;
+    }
+    #reveal{
+        .bg-light-yellow{
+            p{
+                text-align: center;
+            }
+        }
+        #lottie-animation{
+            width: 50%;
+        }
+    }
+    footer{
+        padding-left: 150px;
+        padding-right: 150px;
+        h4{
+            font-size: 56px;
+        }
+        h5{
+            font-size: 40px;
+        }
+        .contact{
+            ul{
+                justify-content: center;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    header{
+        padding: 0px 100px;
+    }
+    nav{
+        padding: 10px 25px;
+        margin: 20px 90px;
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+    }
+    #hero{
+        padding: 40px 90px;
+        .image-float{
+            margin-right: 80px;
+        }
+        .floating-image{
+            width: 60%;
+            margin-left: 55%;
+        }
+        .floating-text{
+            justify-content: start;
+        }
+    }
+    #description{
+        padding: 40px 90px;
+        p{
+            width: 80%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .chess{
+            img{
+                width: 70%;
+            }
+        }
+        ul{
+            .col-md-8{
+                margin-left: 0;
+            }
+            li{
+                font-size: 20px;
+            }
+        }
+    }
+    #catalyst{
+        .caption-heading-1{
+            width: 100%;
+            p{
+                font-size: 20px;
+            }
+        }
+        .group{
+            padding: 50px 100px;
+        }
+        .element{
+            width: 40%;
+        }
+    }
+    #timeline{
+        padding: 20px 90px;
+        .group{
+            justify-content: start;
+            gap: 400px;
+        }
+        img{
+            width: 30%;
+        }
+        .btn-dark-green{
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+            font-size: 24px;
+        }
+    }
+    #reveal{
+        min-height: 150vh;
+        padding-top: 30px;
+        .caption{
+            font-size: 20px;
+        }
+        .vision-mission{
+            .caption-heading{
+                flex-direction: row;
+            }
+            
+        }
+        #scc.caption-heading{
+            #lottie-animation{
+                width: 40%;
+            }
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        #ipc.caption-heading{
+            flex-direction: row-reverse;
+            margin-top: 30px;
+            .bg-light-green{
+                width: 50%;
+            }
+            p{
+                font-size: 20px;
+            }
+            #lottie-animation{
+                width: 40%;
+            }
+        }
+    }
+    #reveal.type-competition{
+        .group{
+            padding: 10px 90px;
+        }
+        .vision-mission{
+            padding: 0 90px;
+        }
+        .bg-gray, .bg-dark-green{
+            font-size: 20px;
+        }
+    }
+    #graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 110svh;
+    }
+    footer{
+        min-height: 100vh;
+        padding-left: 450px;
+        padding-right: 450px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h4{
+            font-size: 40px;
+        }
+        hr{
+            margin-top: 10px;
+        }
+        span{
+            margin-top: 10px;
+        }
+    }
+}
+@media screen and (min-width: 1600px){
+    header{
+        padding: 20px 90px;
+    }
+    nav{
+        padding: 20px 25px;
+        ul{
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    #hero{
+        .floating-image{
+            width: 55%;
+        }
+    }
+}

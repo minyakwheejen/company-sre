@@ -1,0 +1,996 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-heading {
+  font-family: "Inter", sans-serif;
+}
+
+.font-primary {
+  font-family: "Poppins", sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #0F936D 30.6%, #DDE7B8 85.3%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: clamp(45px, 5vw, 48px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 32px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  font-size: clamp(28px, 5vw, 32px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+h4 {
+  font-size: clamp(10px, 5vw, 18px);
+}
+
+p {
+  font-size: clamp(10px, 4vw, 16px);
+  margin-bottom: 0;
+}
+
+.btn-dark-green {
+  background-color: #3B5D50;
+  color: #F5F5F5;
+}
+
+.btn-dark-green:hover {
+  background-color: #CA8239;
+  color: #F5F5F5;
+}
+
+.text-primary {
+  color: #0F936D;
+}
+
+.text-dark-green {
+  color: #3B5D50;
+}
+
+.text-light-green {
+  color: #DDE7B8;
+}
+
+.text-orange {
+  color: #CA8239;
+}
+
+.bg-dark-green {
+  background-color: #1C4839;
+}
+
+.bg-light-yellow {
+  background-color: #fadb5d;
+}
+
+.bg-light-green {
+  background-color: #DDE7B8;
+}
+
+.bg-gray {
+  background-color: #D9D9D9;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+header {
+  overflow: hidden;
+  position: fixed;
+  z-index: 4;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 25px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  border-radius: 38px;
+  width: 90%;
+  justify-content: center;
+}
+nav .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+nav .logo img {
+  width: 15%;
+  height: auto;
+  z-index: 3;
+}
+nav .logo .name {
+  width: 100%;
+  color: black;
+  font-size: 5rem;
+  font-family: "Holtwood One SC", sans-serif;
+}
+nav ul li a {
+  font-size: clamp(12px, 5vw, 16px);
+  color: #000;
+}
+nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 16px 16px 16px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 70px;
+  width: 90%;
+  transform: translateY(-100%);
+  text-align: center;
+  color: black;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+nav .nav-links a:hover {
+  text-decoration: none;
+  color: #0F936D;
+  font-weight: 700;
+}
+nav .nav-links.show {
+  display: flex;
+  transform: translateY(0);
+  top: 0;
+  margin-top: 70px;
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+.burger .line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #0F936D;
+  border-radius: 3px;
+}
+
+#hero {
+  padding: 30px;
+  min-height: 100vh;
+  background-image: url(../images/background/bg-compe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#hero h1, #hero h2 {
+  text-align: center;
+}
+#hero .group {
+  flex-direction: column-reverse;
+}
+#hero .caption-heading {
+  margin-top: 40px;
+}
+#hero .floating-image {
+  width: 75%;
+  height: 100%;
+  position: relative;
+  animation: floatAnimation 3s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero .floating-text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+#description {
+  min-height: 100vh;
+  padding: 30px;
+  background-color: #F5F5F5;
+}
+#description .containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#description .bg-dark-green {
+  padding: 10px 30px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+}
+#description span {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+}
+#description ul {
+  margin-top: 20px;
+}
+#description ul li {
+  font-size: 14px;
+}
+#description ul .col-md-8 {
+  margin-left: 20px;
+}
+#description .chess img {
+  width: 60%;
+}
+#description p {
+  margin-bottom: 10px;
+}
+
+.type-competition .group {
+  flex-direction: column;
+  padding: 30px;
+}
+.type-competition .caption {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.type-competition .bg-gray, .type-competition .bg-dark-green {
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 16px;
+}
+.type-competition .caption-heading-1 {
+  justify-content: center;
+  align-items: center;
+}
+.type-competition .caption-heading-2 {
+  justify-content: center;
+  align-items: center;
+}
+.type-competition .caption-heading-3 {
+  justify-content: center;
+  align-items: center;
+}
+.type-competition .vision-mission {
+  flex-direction: column;
+  padding: 0px 30px;
+  justify-content: center;
+}
+
+#catalyst {
+  min-height: 100vh;
+  background-image: url(../images/background/Group\ 302.svg);
+  background-size: cover;
+  background-position: center;
+}
+#catalyst .bg-light-yellow {
+  padding: 10px 20px;
+}
+#catalyst .group {
+  flex-direction: column;
+  padding: 20px 30px;
+  align-items: center;
+}
+#catalyst .caption {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+#catalyst .bg-gray, #catalyst .bg-dark-green {
+  padding: 10px 20px;
+  width: fit-content;
+  font-size: 16px;
+}
+#catalyst .caption-heading-1 {
+  justify-content: center;
+  align-items: center;
+}
+#catalyst .caption-heading-2 {
+  justify-content: center;
+  align-items: center;
+}
+#catalyst .caption-heading-3 {
+  justify-content: center;
+  align-items: center;
+}
+#catalyst .vision-mission {
+  flex-direction: column;
+  padding: 0px 30px;
+  justify-content: center;
+}
+#catalyst .element {
+  width: 100%;
+  height: auto;
+}
+
+#timeline {
+  padding: 40px;
+  min-height: 120vh;
+  background: linear-gradient(180deg, #f5f5f5 1.37%, rgba(240, 173, 42, 0.06) 16.79%, rgba(224, 208, 58, 0.28) 78.78%, #F5F5F5 93.22%);
+}
+#timeline .containers {
+  flex-direction: column;
+}
+#timeline .caption-heading {
+  flex-direction: column;
+}
+#timeline h3 {
+  color: #CA8239;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: clamp(36px, 5vw, 38px);
+}
+#timeline h4 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#timeline .btn-dark-green {
+  width: fit-content;
+  height: 100%;
+  padding: 10px 20px;
+  color: #F5F5F5;
+}
+#timeline .btn-dark-green:hover {
+  background-color: #fadb5d;
+  color: #000;
+}
+#timeline img {
+  width: 100%;
+  height: 100%;
+}
+
+#reveal {
+  min-height: 200vh;
+  padding-bottom: 50px;
+  background-image: url(../images/background/reveal2.svg);
+  background-size: cover;
+  background-position: center;
+}
+#reveal .bg-light-green {
+  padding: 10px 20px;
+}
+#reveal .caption {
+  flex-direction: column;
+  margin-top: 20px;
+}
+#reveal .caption-heading {
+  flex-direction: column;
+}
+#reveal h4 {
+  font-size: 20px;
+}
+
+#reveal.type-competition .group {
+  padding: 10px 30px;
+}
+#reveal.type-competition .caption {
+  text-shadow: none;
+  font-weight: 500;
+}
+
+#graphic {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background/bg-macbook.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #1C4839;
+  padding: 30px;
+  min-height: 100vh;
+}
+footer h4 {
+  font-size: clamp(20px, 6vw, 32px);
+  margin-bottom: 20px;
+}
+footer h5 {
+  font-size: clamp(20px, 6vw, 32px);
+}
+footer span {
+  font-size: clamp(10px, 6vw, 18px);
+  margin-top: 5%;
+}
+footer hr {
+  color: #F5F5F5;
+  width: 100%;
+  margin-top: 80px;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer .recap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+}
+footer .recap iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+footer .contact {
+  margin-top: 50px;
+}
+footer .contact ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 20px;
+  padding-top: 40px;
+  padding-left: 0;
+}
+footer .contact ul li {
+  list-style: none;
+}
+footer .contact ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 100px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow-y: hidden;
+  border: 3px solid #F5F5F5;
+  z-index: 1;
+}
+footer .contact ul li a .icon {
+  position: relative;
+  color: #F5F5F5;
+  transition: 0.5s;
+  z-index: 3;
+  font-size: 32px;
+  margin-top: 2px;
+  overflow-y: hidden;
+}
+footer .contact ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+footer .contact ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+footer .contact ul li a:hover:before {
+  top: 0;
+}
+footer .contact .fa-brands.fa-instagram.icon {
+  font-size: 35px;
+  line-height: 70px;
+}
+footer .contact ul li:nth-child(1) a:before {
+  background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0) 100%), radial-gradient(202.83% 136.37% at 84.5% 113.5%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+}
+footer .contact ul li:nth-child(2) a:before {
+  background: #000;
+}
+footer .contact ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+footer .contact ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+@media screen and (min-width: 500px) {
+  #hero .floating-image {
+    width: 60%;
+  }
+  #description .chess img {
+    width: 50%;
+  }
+  #catalyst h3 {
+    font-size: clamp(34px, 5vw, 36px);
+  }
+  #catalyst span {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+  #catalyst .element {
+    width: 70%;
+  }
+  #timeline img {
+    width: 70%;
+  }
+  #reveal h3 {
+    font-size: clamp(34px, 5vw, 36px);
+  }
+  #reveal span {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 600px) {
+  nav .logo img {
+    width: 10%;
+  }
+}
+@media screen and (min-width: 635px) and (max-width: 767px) {
+  nav .logo img {
+    width: 10%;
+  }
+  #timeline img {
+    width: 60%;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+  #reveal .bg-light-yellow p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 927px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  nav .logo img {
+    width: 10%;
+  }
+  #hero {
+    padding: 50px;
+  }
+  #hero .group {
+    justify-content: center;
+    align-items: center;
+  }
+  #hero .caption-heading {
+    text-align: center;
+  }
+  #hero .floating-image {
+    width: 45%;
+  }
+  #description {
+    padding: 50px;
+    min-height: 60vh;
+  }
+  #description .output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #description .chess {
+    width: 50%;
+  }
+  #description .chess img {
+    width: 100%;
+  }
+  #description ul li {
+    margin-left: 0;
+  }
+  #catalyst {
+    min-height: 70vh;
+  }
+  #catalyst .group {
+    padding: 20px 30px;
+  }
+  #catalyst .vision-mission {
+    flex-direction: row;
+    padding: 0px 30px;
+    justify-content: center;
+  }
+  #catalyst .vision-mission p {
+    font-size: 14px;
+  }
+  #timeline {
+    padding: 50px;
+  }
+  #timeline .containers {
+    flex-direction: row;
+    flex-direction: column;
+  }
+  #timeline img {
+    width: 50%;
+  }
+  #timeline .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #reveal {
+    min-height: 120vh;
+  }
+  #reveal .vision-mission .caption-heading {
+    flex-direction: row;
+  }
+  #reveal #scc.caption-heading #lottie-animation {
+    width: 40%;
+  }
+  #reveal #scc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #scc.caption-heading p {
+    font-size: 16px;
+  }
+  #reveal #ipc.caption-heading {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
+  #reveal #ipc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #ipc.caption-heading p {
+    font-size: 16px;
+  }
+  #reveal.type-competition .group {
+    padding: 10px 50px;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 928px) {
+  h1 {
+    font-size: clamp(60px, 5vw, 62px);
+  }
+  h2 {
+    font-size: clamp(50px, 5vw, 52px);
+  }
+  header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  nav {
+    justify-content: center;
+    align-items: center;
+    padding: 3px 18px;
+  }
+  nav .nav-links {
+    flex-direction: row;
+    transform: none;
+    z-index: 0;
+    transition: none;
+    justify-content: right;
+    position: relative;
+    background-color: transparent;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    gap: 50px;
+  }
+  nav .logo img {
+    width: 20%;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .burger {
+    display: none;
+  }
+  #hero {
+    padding: 20px 90px;
+  }
+  #hero .group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #hero .floating-image {
+    width: 100%;
+  }
+  #description {
+    padding: 50px;
+    min-height: 50svh;
+  }
+  #description .output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  #description span {
+    font-size: 20px;
+  }
+  #description p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #description .chess {
+    width: 40%;
+  }
+  #description .chess img {
+    width: 100%;
+  }
+  #description ul li {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  #description .col-md-2 {
+    width: 10%;
+  }
+  #catalyst {
+    min-height: 80svh;
+  }
+  #catalyst .group {
+    flex-direction: row;
+    padding: 50px;
+  }
+  #catalyst .caption-heading-1 {
+    justify-content: center;
+    align-items: end;
+  }
+  #catalyst .caption-heading-1 .caption {
+    text-align: end;
+  }
+  #catalyst .vision-mission {
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+  #catalyst .caption {
+    width: 90%;
+  }
+  #catalyst .element {
+    width: 40%;
+  }
+  #timeline {
+    min-height: 80svh;
+    padding: 50px;
+  }
+  #timeline .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #timeline img {
+    width: 40%;
+  }
+  #timeline h3 {
+    font-size: 40px;
+  }
+  #timeline h4 {
+    font-size: 30px;
+  }
+  #reveal {
+    min-height: 100vh;
+  }
+  #reveal .vision-mission .caption-heading {
+    flex-direction: row;
+  }
+  #reveal #scc.caption-heading #lottie-animation {
+    width: 40%;
+  }
+  #reveal #scc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #scc.caption-heading p {
+    font-size: 16px;
+  }
+  #reveal #ipc.caption-heading {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
+  #reveal #ipc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #ipc.caption-heading p {
+    font-size: 16px;
+  }
+  #reveal.type-competition .group {
+    padding: 10px 50px;
+  }
+  #graphic {
+    background-image: url(../images/background/bg-macbook.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+  }
+  #reveal .bg-light-yellow p {
+    text-align: center;
+  }
+  #reveal #lottie-animation {
+    width: 50%;
+  }
+  footer {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  footer h4 {
+    font-size: 56px;
+  }
+  footer h5 {
+    font-size: 40px;
+  }
+  footer .contact ul {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 0px 100px;
+  }
+  nav {
+    padding: 10px 25px;
+    margin: 20px 90px;
+  }
+  nav .logo img {
+    width: 15%;
+  }
+  #hero {
+    padding: 40px 90px;
+  }
+  #hero .image-float {
+    margin-right: 80px;
+  }
+  #hero .floating-image {
+    width: 60%;
+    margin-left: 55%;
+  }
+  #hero .floating-text {
+    justify-content: start;
+  }
+  #description {
+    padding: 40px 90px;
+  }
+  #description p {
+    width: 80%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  #description .chess img {
+    width: 70%;
+  }
+  #description ul .col-md-8 {
+    margin-left: 0;
+  }
+  #description ul li {
+    font-size: 20px;
+  }
+  #catalyst .caption-heading-1 {
+    width: 100%;
+  }
+  #catalyst .caption-heading-1 p {
+    font-size: 20px;
+  }
+  #catalyst .group {
+    padding: 50px 100px;
+  }
+  #catalyst .element {
+    width: 40%;
+  }
+  #timeline {
+    padding: 20px 90px;
+  }
+  #timeline .group {
+    justify-content: start;
+    gap: 400px;
+  }
+  #timeline img {
+    width: 30%;
+  }
+  #timeline .btn-dark-green {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 24px;
+  }
+  #reveal {
+    min-height: 150vh;
+    padding-top: 30px;
+  }
+  #reveal .caption {
+    font-size: 20px;
+  }
+  #reveal .vision-mission .caption-heading {
+    flex-direction: row;
+  }
+  #reveal #scc.caption-heading #lottie-animation {
+    width: 40%;
+  }
+  #reveal #scc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #scc.caption-heading p {
+    font-size: 20px;
+  }
+  #reveal #ipc.caption-heading {
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
+  #reveal #ipc.caption-heading .bg-light-green {
+    width: 50%;
+  }
+  #reveal #ipc.caption-heading p {
+    font-size: 20px;
+  }
+  #reveal #ipc.caption-heading #lottie-animation {
+    width: 40%;
+  }
+  #reveal.type-competition .group {
+    padding: 10px 90px;
+  }
+  #reveal.type-competition .vision-mission {
+    padding: 0 90px;
+  }
+  #reveal.type-competition .bg-gray, #reveal.type-competition .bg-dark-green {
+    font-size: 20px;
+  }
+  #graphic {
+    background-image: url(../images/background/bg-macbook.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 110svh;
+  }
+  footer {
+    min-height: 100vh;
+    padding-left: 450px;
+    padding-right: 450px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer h4 {
+    font-size: 40px;
+  }
+  footer hr {
+    margin-top: 10px;
+  }
+  footer span {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  header {
+    padding: 20px 90px;
+  }
+  nav {
+    padding: 20px 25px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+  #hero .floating-image {
+    width: 55%;
+  }
+}/*# sourceMappingURL=competition.css.map */

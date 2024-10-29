@@ -1,0 +1,1353 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-heading {
+  font-family: "Inter", sans-serif;
+}
+
+.font-primary {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-dark-green {
+  background-color: #3B5D50;
+  color: #F5F5F5;
+}
+
+.btn-dark-green:hover {
+  background-color: #CA8239;
+  color: #F5F5F5;
+}
+
+.text-primary {
+  color: #0F936D;
+}
+
+.text-dark-green {
+  color: #3B5D50;
+}
+
+.text-light-green {
+  color: #DDE7B8;
+}
+
+.text-orange {
+  color: #CA8239;
+}
+
+.text-gradient {
+  background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 58px);
+}
+
+h2 {
+  font-size: clamp(22px, 5vw, 26px);
+}
+
+header {
+  overflow: hidden;
+  position: fixed;
+  z-index: 4;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 25px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  border-radius: 38px;
+  width: 90%;
+  justify-content: center;
+}
+nav .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+nav .logo img {
+  width: 15%;
+  height: auto;
+  z-index: 3;
+}
+nav .logo .name {
+  width: 100%;
+  color: black;
+  font-size: 5rem;
+  font-family: "Holtwood One SC", sans-serif;
+}
+nav ul li a {
+  font-size: clamp(12px, 5vw, 16px);
+  color: #000;
+}
+nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 16px 16px 16px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 70px;
+  width: 90%;
+  transform: translateY(-100%);
+  text-align: center;
+  color: black;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+nav .nav-links a:hover {
+  text-decoration: none;
+  color: #0F936D;
+  font-weight: 700;
+}
+nav .nav-links.show {
+  display: flex;
+  transform: translateY(0);
+  top: 0;
+  margin-top: 70px;
+}
+
+.burger {
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+.burger .line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #0F936D;
+  border-radius: 3px;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url(../images/background/people-fotbar.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  padding: 30px;
+}
+.hero h1 {
+  color: #F5F5F5;
+  margin-top: 350px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.hero h2 {
+  color: #F5F5F5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#description {
+  min-height: 120vh;
+  background-color: #F5F5F5;
+  padding: 30px 30px 20px 30px;
+}
+#description h2 {
+  background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#description .text-gradient {
+  background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#description .mission {
+  margin-top: 50px;
+}
+#description ul {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#description ul li {
+  margin-top: 20px;
+}
+#description ul #lottie-animation {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  background-color: #F5F5F5;
+  filter: drop-shadow(0px 4px 4px rgba(65, 119, 65, 0.5));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#description ul p {
+  font-size: clamp(8px, 5vw, 12px);
+  width: 60%;
+  margin-left: 10px;
+}
+
+#president {
+  min-height: 200vh;
+  padding: 30px 30px 10px 30px;
+  background: linear-gradient(180deg, #F5F5F5 0.37%, rgba(157, 180, 32, 0.13) 16.79%, #E4F6E1 76.3%, #f5f5f5 93.22%);
+}
+#president .containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#president .head-title {
+  background-color: #3B5D50;
+  color: #F5F5F5;
+  border-radius: 30px;
+  text-align: center;
+  width: 90%;
+}
+#president .head-title span {
+  font-size: clamp(16px, 5vw, 20px);
+}
+#president h2 {
+  font-size: 40px;
+  margin-top: 30px;
+  color: #3B5D50;
+}
+#president h3 {
+  font-size: 30px;
+}
+#president p {
+  font-size: clamp(10px, 5vw, 14px);
+  margin-top: 20px;
+}
+#president #johanes {
+  flex-direction: column;
+  margin-top: 40px;
+}
+#president #johanes img {
+  width: 60%;
+  height: 100%;
+}
+#president #johanes .head-title {
+  width: 70%;
+}
+#president #johanes .head-title span {
+  font-size: clamp(12px, 5vw, 16px);
+}
+#president #marcel, #president #vero, #president #sasa, #president #daru {
+  margin-top: 40px;
+}
+#president #marcel img, #president #vero img, #president #sasa img, #president #daru img {
+  width: 50%;
+}
+#president #marcel .head-title, #president #vero .head-title, #president #sasa .head-title, #president #daru .head-title {
+  width: 70%;
+}
+#president #marcel .head-title span, #president #vero .head-title span, #president #sasa .head-title span, #president #daru .head-title span {
+  font-size: clamp(10px, 5vw, 14px);
+}
+#president span {
+  text-align: center;
+}
+#president button {
+  border: none;
+}
+#president a {
+  color: #000;
+}
+
+#struktur {
+  min-height: 80vh;
+  padding: 0px 30px 10px 30px;
+  background: linear-gradient(180deg, #F5F5F5 10%, rgba(157, 180, 32, 0.13) 16.79%, #E4F6E1 76.3%, #f5f5f5 93.22%);
+}
+#struktur h3 {
+  margin-top: 20px;
+  font-size: clamp(24px, 5vw, 30px);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+#struktur .gallery {
+  width: 100%;
+  height: 100%;
+  margin-top: 45%;
+}
+#struktur img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#struktur .gallery-container {
+  align-items: center;
+  display: flex;
+  height: 80%;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+#struktur .gallery-item {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  width: 50%;
+  z-index: 0;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+#struktur .gallery-item-1 {
+  left: 15%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-2, #struktur .gallery-item-4 {
+  height: auto;
+  opacity: 0.8;
+  width: 50%;
+  z-index: 1;
+}
+#struktur .gallery-item-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: auto;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2;
+}
+#struktur .gallery-item-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+#struktur .gallery-item-5 {
+  left: 80%;
+  opacity: 5;
+  transform: translateX(-50%);
+}
+#struktur .gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 90px;
+  margin-top: -10%;
+  position: sticky;
+  z-index: 8;
+  gap: 50px;
+}
+#struktur .gallery-controls button {
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 30px 100px;
+  padding: 25px 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fadb5d;
+  color: #000;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+#struktur .gallery-controls-button:focus {
+  outline: none;
+}
+#struktur .gallery-controls-previous {
+  position: relative;
+}
+#struktur .gallery-controls-previous::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transition: left 0.15 ease-in-out;
+  width: 5px;
+}
+#struktur .gallery-controls-previous:hover::before {
+  left: -40px;
+}
+#struktur .gallery-controls-next {
+  position: relative;
+}
+#struktur .gallery-controls-next::before {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  right: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  transition: left 0.15 ease-in-out;
+  width: 5px;
+}
+#struktur .gallery-controls-next:hover::before {
+  right: -40px;
+}
+#struktur .gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+#struktur .gallery-nav li {
+  background: #f5f5f5;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 16px;
+}
+#struktur .gallery-nav li.gallery-item-selected {
+  background: #555;
+}
+
+#alumni {
+  min-height: 80vh;
+  background-color: #F5F5F5;
+  padding: 10px 30px;
+}
+#alumni h2 {
+  font-size: 30px;
+}
+#alumni .role {
+  font-size: 10px;
+}
+#alumni .role-name {
+  gap: 20px;
+  flex-direction: column;
+}
+#alumni .role-image {
+  width: 70%;
+}
+#alumni .associates span {
+  font-size: 12px;
+}
+#alumni .associates .name {
+  font-size: 12px;
+}
+#alumni .cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+}
+#alumni .cards-container span {
+  color: #1C4839;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper #left {
+  left: -22px;
+}
+.wrapper #right {
+  right: -22px;
+}
+.wrapper .sosmed {
+  border-radius: 0;
+  position: relative;
+  box-shadow: none;
+  background: transparent;
+}
+.wrapper .slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 105%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider.no-transition {
+  scroll-behavior: auto;
+}
+.slider.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.slider.dragging .cards {
+  cursor: grab;
+  user-select: none;
+}
+.slider :where(.cards, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .cards {
+  scroll-snap-align: center;
+  height: 100%;
+  list-style: none;
+  background: #fadb5d;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.slider .cards h5 {
+  font-size: 12px;
+}
+.slider .cards .caption {
+  width: 60%;
+  height: 100%;
+}
+.slider .cards .img {
+  height: 100%;
+  width: 35%;
+}
+.slider .cards .img img {
+  width: 100%;
+  height: auto;
+}
+.slider .cards hr {
+  color: #000;
+  width: 100%;
+}
+.slider .testimoni {
+  font-size: 12px;
+}
+
+#partners {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F5F5F5 5%, #66a291 26%, #1b8769 50%, #3db694 80%, #F5F5F5 98%);
+  background-repeat: no-repeat;
+}
+#partners #lottie-animation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#partners .caption {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#partners h3 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 40px;
+}
+#partners h4 {
+  z-index: 3;
+  font-size: 20px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+@keyframes slider {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-1750px);
+  }
+}
+#slider {
+  min-height: 100vh;
+  padding-top: 50px;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+#slider .logos_slider .overflow {
+  display: flex;
+}
+#slider .logos_slider .overflow .logos_wrapper {
+  display: flex;
+  justify-content: space-around;
+  animation: scroll 15s linear infinite;
+}
+#slider .logos_slider .overflow .logos_wrapper .logo_item {
+  margin-left: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.1);
+}
+#slider .logos_slider .overflow .logos_wrapper .logo_item img {
+  width: 200px;
+  height: 202px;
+  place-items: center;
+}
+#slider .logos_right {
+  padding-top: 50px;
+}
+#slider .logos_right .overflow {
+  display: flex;
+}
+#slider .logos_right .overflow .logos_wrapper {
+  display: flex;
+  justify-content: space-around;
+  animation: slider 15s linear infinite;
+}
+#slider .logos_right .overflow .logos_wrapper .logo_item {
+  margin-left: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.1);
+}
+#slider .logos_right .overflow .logos_wrapper .logo_item img {
+  width: 200px;
+  height: 202px;
+  place-items: center;
+}
+
+#graphic {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background/bg-macbook.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #1C4839;
+  padding: 30px;
+  min-height: 100vh;
+}
+footer h4 {
+  font-size: clamp(20px, 6vw, 32px);
+  margin-bottom: 20px;
+}
+footer h5 {
+  font-size: clamp(20px, 6vw, 32px);
+}
+footer span {
+  font-size: clamp(10px, 6vw, 18px);
+  margin-top: 5%;
+}
+footer hr {
+  color: #F5F5F5;
+  width: 100%;
+  margin-top: 80px;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer .recap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+}
+footer .recap iframe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+footer .contact {
+  margin-top: 50px;
+}
+footer .contact ul {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 20px;
+  padding-top: 40px;
+  padding-left: 0;
+}
+footer .contact ul li {
+  list-style: none;
+}
+footer .contact ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 100px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow-y: hidden;
+  border: 3px solid #F5F5F5;
+  z-index: 1;
+}
+footer .contact ul li a .icon {
+  position: relative;
+  color: #F5F5F5;
+  transition: 0.5s;
+  z-index: 3;
+  font-size: 32px;
+  margin-top: 2px;
+  overflow-y: hidden;
+}
+footer .contact ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+footer .contact ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+footer .contact ul li a:hover:before {
+  top: 0;
+}
+footer .contact .fa-brands.fa-instagram.icon {
+  font-size: 35px;
+  line-height: 70px;
+}
+footer .contact ul li:nth-child(1) a:before {
+  background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0) 100%), radial-gradient(202.83% 136.37% at 84.5% 113.5%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+}
+footer .contact ul li:nth-child(2) a:before {
+  background: #000;
+}
+footer .contact ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+footer .contact ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+@media screen and (width: 414px) {
+  #struktur .gallery-controls {
+    margin-top: -15%;
+  }
+}
+@media screen and (min-width: 500px) {
+  nav .logo img {
+    width: 10%;
+  }
+  .hero h1 {
+    margin-top: 50%;
+  }
+  #description ul #lottie-animation {
+    width: 80px;
+    height: 80px;
+  }
+  #description ul p {
+    font-size: clamp(10px, 4vw, 14px);
+  }
+  #president #johanes {
+    flex-direction: column;
+  }
+  #president .caption-president {
+    width: 80%;
+  }
+  #struktur {
+    padding-bottom: 100px;
+  }
+  #struktur .gallery-controls {
+    margin-top: -10%;
+    gap: 150px;
+  }
+  #struktur .gallery-controls button {
+    padding: 25px 20px;
+  }
+  #partners #lottie-animation {
+    width: 60%;
+    margin-left: 20%;
+  }
+  #graphic {
+    min-height: 70vh;
+  }
+}
+@media screen and (min-width: 600px) {
+  nav .logo img {
+    width: 10%;
+  }
+  #alumni .associates .name {
+    font-size: 14px;
+  }
+  #alumni .associates span {
+    font-size: 14px;
+  }
+  .slider .testimoni {
+    font-size: 14px;
+  }
+  .slider .cards h5 {
+    font-size: 14px;
+  }
+  #struktur #gallery {
+    margin-top: 20%;
+  }
+  #struktur .gallery-controls {
+    margin-top: -10%;
+    gap: 250px;
+  }
+  #struktur .bagan {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 700px) {
+  #struktur {
+    margin-top: -10%;
+  }
+}
+@media screen and (min-width: 635px) and (max-width: 767px) {
+  nav .logo img {
+    width: 10%;
+  }
+  .hero .category {
+    font-size: clamp(8px, 5vw, 12px);
+  }
+  .hero .result {
+    font-size: clamp(8px, 5vw, 10px);
+  }
+  #president .head-title {
+    width: 70%;
+  }
+  #president #johanes {
+    flex-direction: column;
+  }
+  #president #johanes img {
+    width: 40%;
+  }
+  #president #johanes .head-title {
+    width: 50%;
+  }
+  #president #vero img, #president #marcel img, #president #sasa img, #president #daru img {
+    width: 35%;
+  }
+  #president #vero .head-title, #president #marcel .head-title, #president #sasa .head-title, #president #daru .head-title {
+    width: 50%;
+  }
+  #struktur {
+    padding-bottom: 120px;
+  }
+  #struktur .gallery {
+    margin-top: 30%;
+  }
+  #struktur .gallery-controls {
+    margin-top: -10%;
+    gap: 250px;
+  }
+  #struktur .bagan {
+    margin-top: 50px;
+  }
+  #graphic {
+    min-height: 80vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 927px) {
+  nav .logo img {
+    width: 10%;
+  }
+  .hero h1 {
+    margin-top: 45%;
+    font-size: 40px;
+  }
+  .hero h2 {
+    font-size: 30px;
+  }
+  #description {
+    padding: 50px;
+    min-height: 80vh;
+  }
+  #description h2 {
+    font-size: 40px;
+  }
+  #description span {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+  #description ul p {
+    font-size: clamp(20px, 5vw, 22px);
+  }
+  #description ul #lottie-animation {
+    height: 100px;
+    width: 100px;
+  }
+  #description p {
+    width: 80%;
+  }
+  #description p span {
+    font-size: 25px;
+  }
+  #president {
+    min-height: 170svh;
+  }
+  #president .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #president .head-title:first-child {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #president #johanes {
+    flex-direction: column;
+  }
+  #president #johanes img {
+    width: 35%;
+  }
+  #president #johanes .head-title {
+    width: 35%;
+  }
+  #president #vero img, #president #marcel img, #president #sasa img, #president #daru img {
+    width: 30%;
+  }
+  #president #vero .head-title, #president #marcel .head-title, #president #sasa .head-title, #president #daru .head-title {
+    width: 35%;
+  }
+  #president p {
+    font-size: 20px;
+  }
+  #struktur {
+    padding-bottom: 200px;
+  }
+  #struktur .gallery-controls {
+    gap: 400px;
+    padding: 40px 35px;
+  }
+  #struktur .bagan {
+    margin-top: 50px;
+  }
+  #alumni .testimoni {
+    font-size: 16px;
+  }
+  #alumni span {
+    font-size: 16px;
+  }
+  #alumni .associates .name {
+    font-size: 16px;
+  }
+  #alumni .associates span {
+    font-size: 16px;
+  }
+  #alumni .caption {
+    margin-top: 10px;
+  }
+  .slider .cards .img img {
+    margin-left: 30px;
+  }
+  .slider .cards h5 {
+    font-size: 16px;
+  }
+  #graphic {
+    min-height: 70svh;
+  }
+}
+@media screen and (min-width: 928px) {
+  header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  nav {
+    justify-content: center;
+    align-items: center;
+    padding: 3px 18px;
+  }
+  nav .nav-links {
+    flex-direction: row;
+    transform: none;
+    z-index: 0;
+    transition: none;
+    justify-content: right;
+    position: relative;
+    background-color: transparent;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    gap: 50px;
+  }
+  nav .logo img {
+    width: 15%;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .burger {
+    display: none;
+  }
+  .hero {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+  }
+  .hero h1 {
+    margin-top: 40%;
+    font-size: 60px;
+  }
+  .hero h2 {
+    font-size: 40px;
+  }
+  #description {
+    padding: 50px;
+    min-height: 80vh;
+  }
+  #description h2 {
+    font-size: 40px;
+  }
+  #description span {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+  #description ul p {
+    font-size: clamp(20px, 5vw, 22px);
+  }
+  #description ul #lottie-animation {
+    height: 100px;
+    width: 100px;
+  }
+  #description p {
+    width: 80%;
+  }
+  #description p span {
+    font-size: 25px;
+  }
+  #president {
+    min-height: 100vh;
+    padding: 50px;
+  }
+  #president #johanes {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 10px;
+  }
+  #president p {
+    font-size: 18px;
+  }
+  #president .caption-president {
+    width: 150%;
+  }
+  #president ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+  #president .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #president .head-title:first-child {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #president #marcel img, #president #vero img, #president #sasa img {
+    width: 70%;
+  }
+  #president #marcel .head-title, #president #vero .head-title, #president #sasa .head-title {
+    width: 100%;
+  }
+  #president #marcel .head-title span, #president #vero .head-title span, #president #sasa .head-title span {
+    font-size: 16px;
+  }
+  #president #marcel span, #president #vero span, #president #sasa span {
+    font-size: 16px;
+  }
+  #president #vero, #president #sasa {
+    margin-top: 55px;
+  }
+  #president #daru img {
+    width: 20%;
+  }
+  #president #daru .head-title {
+    width: 35%;
+  }
+  #president #daru .head-title span {
+    font-size: 16px;
+  }
+  #struktur {
+    padding: 0px 60px 300px 60px;
+  }
+  #struktur h3 {
+    font-size: 40px;
+  }
+  #struktur .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #struktur .gallery-controls {
+    gap: 600px;
+  }
+  #struktur .gallery-controls button {
+    margin-top: 60px;
+    padding: 35px 25px;
+    font-size: 30px;
+  }
+  #struktur .bagan {
+    margin-top: 100px;
+    width: 60%;
+  }
+  #alumni .cards-container {
+    padding: 20px 150px;
+  }
+  #alumni .testimoni {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  #alumni .associates .name {
+    font-size: 20px;
+  }
+  #alumni .associates span {
+    font-size: 20px;
+  }
+  .slider .cards h5 {
+    font-size: 20px;
+  }
+  #graphic {
+    background-image: url(../images/background/bg-macbook.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100svh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  nav {
+    padding: 10px 25px;
+  }
+  nav .logo img {
+    width: 15%;
+  }
+  .hero {
+    padding: 40px 90px;
+  }
+  .hero h1 {
+    margin-top: 25%;
+  }
+  #description {
+    padding: 20px 90px;
+  }
+  #description .vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #description .vision p {
+    width: 70%;
+  }
+  #description ul p {
+    font-size: 20px;
+  }
+  #president {
+    padding: 20px 90px;
+  }
+  #president h2 {
+    font-size: 50px;
+  }
+  #president h3 {
+    font-size: 40px;
+  }
+  #president .caption-president {
+    width: 100%;
+    margin-right: 10px;
+  }
+  #president .image-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #president .head-title:first-child span:first-child {
+    font-size: clamp(16px, 5vw, 18px);
+  }
+  #president #johanes {
+    margin-top: 20px;
+  }
+  #president #johanes img {
+    width: 50%;
+  }
+  #president #johanes .head-title {
+    width: 50%;
+  }
+  #president #johanes .head-title span {
+    font-size: 16px;
+  }
+  #president #sasa span, #president #vero span, #president #marcel span {
+    font-size: 16px;
+  }
+  #president #sasa .head-title, #president #vero .head-title, #president #marcel .head-title {
+    width: 70%;
+    padding: 25px 20px;
+  }
+  #president #sasa .head-title span, #president #vero .head-title span, #president #marcel .head-title span {
+    font-size: 14px;
+  }
+  #president #marcel {
+    margin-top: 50px;
+  }
+  #president #daru span {
+    font-size: 16px;
+  }
+  #president #daru img {
+    width: 30%;
+  }
+  #president #daru .head-title {
+    width: 30%;
+  }
+  #president #daru .head-title span {
+    font-size: 14px;
+  }
+  #president p {
+    font-size: 20px;
+  }
+  #struktur h3 {
+    font-size: clamp(40px, 5vw, 44px);
+  }
+  #struktur .gallery {
+    width: 70%;
+    height: auto;
+    margin-top: 20%;
+  }
+  #alumni h2 {
+    font-size: 42px;
+  }
+  #alumni .cards-container {
+    padding: 20px 300px;
+  }
+  footer {
+    min-height: 100vh;
+    padding-left: 450px;
+    padding-right: 450px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer hr {
+    margin-top: 10px;
+  }
+  footer span {
+    margin-top: 10px;
+  }
+  #graphic {
+    background-image: url(../images/background/bg-macbook.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+  }
+}
+@media screen and (min-width: 1600px) {
+  header {
+    padding: 10px 90px;
+  }
+  nav {
+    padding: 20px 25px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+  .hero h1 {
+    font-size: 65px;
+  }
+  .slider .cards {
+    border-radius: 0;
+    padding: 40px;
+  }
+  .wrapper i {
+    height: 80px;
+    width: 80px;
+    font-size: 25px;
+    line-height: 80px;
+  }
+  .wrapper #right {
+    right: -40px;
+  }
+  .wrapper #left {
+    left: -40px;
+  }
+  footer h6 {
+    font-size: 30px;
+  }
+  footer span {
+    font-size: 20px;
+  }
+  footer .contact .caption {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=aboutsre.css.map */

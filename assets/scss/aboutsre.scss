@@ -1,0 +1,1509 @@
+@import 'variable';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+// body{
+//     overflow-Y: hidden;
+// }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.font-heading{
+    font-family: "Inter", sans-serif;
+}
+.font-primary{
+    font-family: "Poppins", sans-serif;
+}
+.btn-dark-green{
+    background-color: $secondary;
+    color: $white;
+}
+.btn-dark-green:hover{
+    background-color: $orange;
+    color: $white;
+}
+.text-primary{
+    color: $primary;
+}
+.text-dark-green{
+    color: $secondary;
+}
+.text-light-green{
+    color: $light-green;
+}
+.text-orange{
+    color: $orange;
+}
+.text-gradient{
+    background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1{
+    font-size: clamp(#{40px}, 5vw, #{58px});
+}
+h2{
+    font-size: clamp(#{22px}, 5vw, #{26px});
+}
+header{
+    overflow: hidden;
+    position: fixed;
+    z-index: 4;
+    padding: 20px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 25px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    border-radius: 38px;
+    width: 90%;
+    justify-content: center;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        img{
+            width: 15%;
+            height: auto;
+            z-index: 3;
+        }
+        .name{
+            width: 100%;
+            color: black;
+            font-size: 5rem;
+            font-family: 'Holtwood One SC', sans-serif;
+        }
+    }
+
+    ul li a{
+        font-size: clamp(#{12px}, 5vw, #{16px});
+        color: #000;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        padding: 70px 16px 16px 16px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        gap: 70px;
+        width: 90%;
+        transform: translateY(-100%);
+        text-align: center;
+        color: black;
+        transition: all 0.5s ease;
+        z-index: 2;
+        
+        a:hover{
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    .nav-links.show{
+        display: flex;
+        transform: translateY(0);
+        top: 0;
+        margin-top: 70px;
+    }
+}
+.burger{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 2;
+
+    .line{
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: $primary;
+        border-radius: 3px;
+    }
+}
+.hero{
+    min-height: 100vh;
+    background-image:url(../images/background/people-fotbar.jpg) ;
+    background-repeat: repeat;
+    background-size: contain;
+    padding: 30px;
+    h1{
+        color: $white;
+        margin-top: 350px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    h2{
+        color: $white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+#description{
+    min-height: 120vh;
+    background-color: $white;
+    padding: 30px 30px 20px 30px;
+    h2{
+        background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-gradient{
+        background: linear-gradient(92deg, #417741 7.58%, #9FB51E 98.88%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .mission{
+        margin-top: 50px;
+    }
+    ul{
+        margin-top: 30px;
+        padding-left: 0;
+        li{
+            margin-top: 20px;
+        }
+        #lottie-animation{
+            width: 70px;
+            height:70px;
+            position: relative;
+            background-color: $white;
+            filter: drop-shadow(0px 4px 4px rgba(65, 119, 65, 0.50));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: clamp(#{8px}, 5vw, #{12px});
+            width: 60%;
+            margin-left: 10px;
+        }
+    }
+}
+#president{
+    min-height: 200vh;
+    padding: 30px 30px 10px 30px;
+    background: linear-gradient(180deg, #F5F5F5 0.37%, rgba(157, 180, 32, 0.13) 16.79%, #E4F6E1 76.3%, #f5f5f5 93.22%);
+    .containers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-title{
+        background-color: $secondary;
+        color: $white;
+        border-radius: 30px;
+        text-align: center;
+        width: 90%;
+        span{
+            font-size: clamp(#{16px}, 5vw, #{20px});
+        }
+    }
+    h2{
+        font-size: 40px;
+        margin-top: 30px;
+        color: $secondary;
+    }
+    h3{
+        font-size: 30px;
+    }
+    p{
+        font-size: clamp(#{10px}, 5vw, #{14px});
+        margin-top: 20px;
+    }
+    #johanes{
+        flex-direction: column;
+        margin-top: 40px;
+        img{
+            width: 60%;
+            height: 100%;
+        }
+        .head-title{
+            width: 70%;
+            span{
+                font-size: clamp(#{12px}, 5vw, #{16px});
+            }
+        }
+    }
+    #marcel, #vero, #sasa, #daru{
+        margin-top: 40px;
+        img{
+            width: 50%;
+        }
+        .head-title{
+            width: 70%;
+            span{
+                font-size: clamp(#{10px}, 5vw, #{14px});
+            }
+        }
+    }
+    span{
+        text-align: center;
+    }
+    button{
+        border: none;
+    }
+    a{
+        color: #000;
+    }
+}
+#struktur{
+    min-height: 80vh;
+    padding: 0px 30px 10px 30px;
+    background: linear-gradient(180deg, #F5F5F5 10%, rgba(157, 180, 32, 0.13) 16.79%, #E4F6E1 76.3%, #f5f5f5 93.22%);
+
+    h3{
+        margin-top: 20px;
+        font-size: clamp(#{24px}, 5vw, #{30px});
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+    .gallery{
+        width: 100%;
+        height: 100%;
+        margin-top: 45%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+      
+    .gallery-container{
+        align-items: center;
+        display: flex;
+        height: 80%;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+    }
+    .gallery-item{
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+        width: 50%;
+        z-index: 0;
+        border-radius: 15px;
+        background-color: #f5f5f5;
+    }
+    .gallery-item-1{
+        left: 15%;
+        opacity: .4;
+        transform: translateX(-50%);
+    }
+    .gallery-item-2, .gallery-item-4{
+        height: auto;
+        opacity: 0.8;
+        width: 50%;
+        z-index: 1;
+    }
+    .gallery-item-2{
+        left: 30%;
+        transform: translateX(-50%);
+    }
+    .gallery-item-3{
+        box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+        height: auto;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        z-index: 2;
+    }
+    .gallery-item-4{
+        left: 70%;
+        transform: translateX(-50%);
+    }
+    .gallery-item-5{
+        left: 80%;
+        opacity: 5;
+        transform: translateX(-50%);
+    }
+    .gallery-controls{
+        display: flex;
+        justify-content: center;
+        margin: 25px 0;
+        height: 90px;
+        margin-top: -10%;
+        position: sticky;
+        z-index: 8;
+        gap: 50px;
+    }
+    .gallery-controls button{
+        border: 0;
+        cursor: pointer;
+        font-size: 24px;
+        margin: 30px 100px;
+        padding: 25px 20px;
+        font-family: "Poppins", sans-serif;
+        background-color: $light-yellow;
+        color: #000;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        
+    }
+    .gallery-controls-button:focus{
+        outline: none;
+    }
+    .gallery-controls-previous{
+        position: relative;
+    }
+    .gallery-controls-previous::before{
+        // border: solid black;
+        // border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        left: -30px;
+        padding: 10px;
+        position: absolute;
+        top: 25%;
+        // transform: rotate(135deg) translateY(-50%);
+        transition: left 0.15 ease-in-out;
+        width: 5px;
+        // background-color: $primary;
+    }
+    .gallery-controls-previous:hover::before{
+        left: -40px;
+    }
+    .gallery-controls-next{
+        position: relative;
+    }
+    .gallery-controls-next::before{
+        // border: solid black;
+        // border-width: 0 5px 5px 0;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        right: -30px;
+        padding: 10px;
+        position: absolute;
+        top: 45%;
+        // transform: rotate(315deg) translateY(-50%);
+        transition: left 0.15 ease-in-out;
+        width: 5px;
+    }
+    .gallery-controls-next:hover::before{
+        right: -40px;
+    }
+    .gallery-nav{
+        bottom: -15px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .gallery-nav li{
+        background: #f5f5f5;
+        border-radius: 50%;
+        height: 10px;
+        margin: 0 16px;
+        width: 16px;
+    }
+    .gallery-nav li.gallery-item-selected{
+        background: #555;  
+    }
+}
+#alumni{
+    min-height: 80vh;
+    background-color: $white;
+    padding: 10px 30px;
+    h2{
+        font-size: 30px;
+    }
+    .role{
+        font-size: 10px;
+    }
+    .role-name{
+        gap: 20px;
+        flex-direction: column;
+    }
+    .role-image{
+        width: 70%;
+    }
+    .associates{
+        span{
+            font-size: 12px;
+        }
+        .name{
+            font-size: 12px;
+        }
+    }
+    .cards-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px;
+        span{
+            color: $darker;
+        }
+    }
+}
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    i{
+        top: 40%;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+
+        &:active{
+            transform: translateY(-50%) scale(0.85);
+        }
+        // &:first-child{
+        //     left: -22px;
+        // }
+        // &:last-child{
+        //     right: -22px;
+        // }
+    }
+    #left{
+        left: -22px;
+    }
+    #right{
+        right: -22px;
+    }
+    .sosmed{
+        border-radius: 0;
+        position: relative;
+        box-shadow: none;
+        background: transparent;
+    }
+    .slider{
+        display: grid;
+        grid-auto-flow: column;
+        // grid-auto-columns: calc((100% / 3) - 12px);
+        grid-auto-columns: 105%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+}
+.slider{
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    &.no-transition{
+        scroll-behavior: auto;
+    }
+    &.dragging{
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+
+        .cards{
+            cursor: grab;
+            user-select: none;
+        }
+    }
+    :where(.cards, .img){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        scroll-snap-align: center;
+        height: 100%;
+        list-style: none;
+        background: $light-yellow;
+        cursor: pointer;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+        h5{
+            font-size: 12px;
+        }
+        .caption{
+            width: 60%;
+            height: 100%;
+        }
+        .img{
+            // background: #8B53FF;
+            height: 100%;
+            width: 35%;
+            // border-radius: 50%;
+
+            img{
+                width: 100%;
+                height: auto;
+                // border-radius: 50%;
+                // object-fit: cover;
+                // border: 4px solid #fff;
+            }
+        }
+        hr{
+            color: #000;
+            width: 100%;
+        }
+        
+    }
+    .testimoni{
+        font-size: 12px;
+    }
+    
+}
+
+#partners{
+    min-height: 100vh;
+    // background-image: url(../images/background/bg-partner.png);
+    // background-color: $primary;
+    background: linear-gradient(180deg, #F5F5F5 5%, #66a291 26%, #1b8769 50%, #3db694 80%, #F5F5F5 98%);
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    #lottie-animation{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .caption{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // top: -30px;
+        z-index: 2;
+    }
+    h3{
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 40px;
+    }
+    h4{
+        z-index: 3;
+        font-size: 20px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    // .grad{
+    //     background: linear-gradient(180deg, #c99a0b, #fdfffe );
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;   
+    // }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes slider{
+    100%{
+        transform: translateX(0);
+    }
+    0%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+#slider{
+   min-height: 100vh;
+   padding-top: 50px;
+   overflow: hidden;
+   background-color: #F5F5F5;
+   .logos_slider{
+    .overflow{
+        display: flex;
+        .logos_wrapper{
+            display: flex;
+            justify-content: space-around;
+            animation: scroll 15s linear infinite;
+            .logo_item{
+                margin-left: 1rem;
+                display: grid;
+                place-items: center;
+                border-radius: 30px;
+                box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.10);
+                img{
+                    width: 200px;
+                    height: 202px;
+                    place-items: center;
+                }
+            }
+        }
+    }
+   }
+   .logos_right{
+    padding-top: 50px;
+    .overflow{
+        display: flex;
+        .logos_wrapper{
+            display: flex;
+            justify-content: space-around;
+            animation: slider 15s linear infinite;
+            .logo_item{
+                margin-left: 1rem;
+                display: grid;
+                place-items: center;
+                border-radius: 30px;
+                box-shadow: 0px 4px 20px 0px rgba(43, 57, 11, 0.10);
+                img{
+                    width: 200px;
+                    height: 202px;
+                    place-items: center;
+                }
+            }
+        }
+    }
+   }
+}
+
+#graphic{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/background/bg-macbook.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+footer{
+    background-color: $darker;
+    padding: 30px;
+    min-height: 100vh;
+    h4{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+        margin-bottom: 20px;
+    }
+    h5{
+        font-size: clamp(#{20px}, 6vw, #{32px});
+    }
+    span{
+        font-size: clamp(#{10px}, 6vw, #{18px});
+        margin-top: 5%;
+    }
+    hr{
+        color: $white;
+        width: 100%;
+        margin-top: 80px;
+    }
+    h4{
+        margin-bottom: 20px;
+    }
+    .recap{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        padding-top: 56.25%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    
+    .contact{
+        margin-top: 50px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            gap: 20px;
+            padding-top: 40px;
+            padding-left: 0;
+            // transform: translate(-50%, -50%);
+        }
+        ul li {
+            list-style: none;
+        }
+        ul li a {
+            width: 80px;
+            height: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow-y: hidden;
+            border: 3px solid $white;
+            z-index: 1;
+        }
+        ul li a .icon {
+            position: relative;
+            color: $white;
+            transition: .5s;
+            z-index: 3;
+            font-size: 32px;
+            margin-top: 2px;
+            overflow-y: hidden;
+        }
+    
+        ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+        }
+    
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+        }
+        ul li a:hover:before {
+            top: 0;
+        }
+
+        .fa-brands.fa-instagram.icon{
+            font-size: 35px;
+            line-height: 70px;
+
+        }
+    
+        ul li:nth-child(1) a:before{
+            background: radial-gradient(61.46% 59.09% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(202.83% 136.37% at 84.50% 113.50%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);
+        }
+    
+        ul li:nth-child(2) a:before{
+            background: #000;
+        }
+        
+        ul li:nth-child(3) a:before {
+            background: #0077b5;
+        }
+    
+        ul li:nth-child(4) a:before {
+            background: #dd4b39;
+        }
+    }
+}
+@media screen and (width: 414px){
+    #struktur{
+        .gallery-controls{
+            margin-top: -15%;
+        }
+    }
+}
+@media screen and (min-width: 500px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .hero{
+        h1{
+            margin-top: 50%;
+        }
+    }
+    #description{
+        ul{
+            #lottie-animation{
+                width: 80px;
+                height: 80px;
+            }
+            p{
+                font-size: clamp(#{10px}, 4vw, #{14px});
+            }
+        }
+    }
+    #president{
+        #johanes{
+            flex-direction: column;
+        }
+        .caption-president{
+            width: 80%;
+        }
+    }
+    #struktur{
+        padding-bottom: 100px;
+        .gallery-controls{
+            margin-top: -10%;
+            gap: 150px;
+        }
+        .gallery-controls button{
+            padding: 25px 20px;
+        }
+    }
+    #partners{
+        #lottie-animation{
+            width: 60%;
+            margin-left: 20%;
+        }
+    }
+    #graphic{
+        min-height: 70vh;
+    }
+}
+@media screen and (min-width: 600px){
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    #alumni{
+        .associates{
+            .name{
+                font-size: 14px;
+            }
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+    .slider{
+        .testimoni{
+            font-size: 14px;
+        }
+        .cards{
+            h5{
+                font-size: 14px;
+            }
+        }
+    }
+    #struktur{
+        #gallery{
+            margin-top: 20%;
+        }
+        .gallery-controls{
+            margin-top: -10%;
+            gap: 250px;
+        }
+        .bagan{
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (min-width: 700px){
+    #struktur{
+        margin-top: -10%;
+    }
+}
+@media screen and (min-width: 635px) and (max-width: 767px) {
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .hero{
+        .category{
+            font-size: clamp(#{8px}, 5vw, #{12px});
+        }
+        .result{
+            font-size: clamp(#{8px}, 5vw, #{10px});
+
+        }
+    }
+    #president{
+        .head-title{
+            width: 70%;
+        }
+        #johanes{
+            flex-direction: column;
+            img{
+                width: 40%;
+            }
+            .head-title{
+                width: 50%;
+            }
+        }
+        #vero, #marcel, #sasa, #daru{
+            img{
+                width: 35%;
+            }
+            .head-title{
+                width: 50%;
+            }
+        }
+    }
+    #struktur{
+        padding-bottom: 120px;
+        .gallery{
+            margin-top: 30%;
+        }
+        .gallery-controls{
+            margin-top: -10%;
+            gap: 250px;
+        }
+        .bagan{
+            margin-top: 50px;
+        }
+    }
+    #graphic{
+        min-height: 80vh;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 927px) {
+    nav{
+        .logo{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    .hero{
+        h1{
+            margin-top: 45%;
+            font-size: 40px;
+        }
+        h2{
+            font-size: 30px;
+        }
+    }
+    #description{
+        padding: 50px;
+        min-height: 80vh;
+        h2{
+            font-size: 40px;
+        }
+        span{
+            font-size: clamp(#{16px}, 5vw, #{20px});
+        }
+        ul {
+            p{
+                font-size: clamp(#{20px}, 5vw, #{22px});
+            }
+            #lottie-animation{
+                height: 100px;
+                width: 100px;
+            }
+        }
+        p{
+            width: 80%;
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+    #president{
+        min-height: 170svh;
+        .containers{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .head-title:first-child{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #johanes{
+            flex-direction: column;
+            img{
+                width: 35%;
+            }
+            .head-title{
+                width: 35%;
+            }
+        }
+        #vero, #marcel, #sasa, #daru{
+            img{
+                width: 30%;
+            }
+            .head-title{
+                width: 35%;
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    #struktur{
+        padding-bottom: 200px;
+        .gallery-controls{
+            gap: 400px;
+            padding: 40px 35px;
+        }
+        .bagan{
+            margin-top: 50px;
+        }
+    }
+    #alumni{
+        .testimoni{
+            font-size: 16px;
+        }
+        span{
+            font-size: 16px;
+        }
+        .associates{
+            .name{
+                font-size: 16px;
+            }
+            span{
+                font-size: 16px;
+            }
+        }
+        .caption{
+            margin-top: 10px;
+        }
+    }
+    .slider{
+        .cards{
+            .img{
+                img{
+                    margin-left: 30px;
+                }
+            }
+            h5{
+                font-size: 16px;
+            }
+        }
+    }
+
+    #graphic{
+        min-height: 70svh;
+    }
+    
+}
+
+/////////////////// big tablet ////////////////////////////////////////////
+@media screen and (min-width: 928px){
+    header{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        padding: 3px 18px;
+        .nav-links{
+            flex-direction: row;
+            transform: none;
+            z-index: 0;
+            transition: none;
+            justify-content: right;
+            position: relative;
+            background-color: transparent;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 0;
+            gap: 50px;
+        }
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .burger{
+        display: none;
+    }
+
+    .hero{
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 50px;
+        h1{
+            margin-top: 40%;
+            font-size: 60px;
+        }
+        h2{
+            font-size: 40px;
+        }
+    }
+    #description{
+        padding: 50px;
+        min-height: 80vh;
+        h2{
+            font-size: 40px;
+        }
+        span{
+            font-size: clamp(#{16px}, 5vw, #{20px});
+        }
+        ul {
+            p{
+                font-size: clamp(#{20px}, 5vw, #{22px});
+            }
+            #lottie-animation{
+                height: 100px;
+                width: 100px;
+            }
+        }
+        p{
+            width: 80%;
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+    #president{
+        min-height: 100vh;
+        padding: 50px;
+        #johanes{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 10px;
+        }
+        p{
+            font-size: 18px;
+        }
+        .caption-president{
+            width: 150%;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+        .containers{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .head-title:first-child{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #marcel, #vero, #sasa{
+            img{
+                width: 70%;
+            }
+            .head-title{
+                width: 100%;
+                span{
+                    font-size: 16px;
+                }
+            }
+            span{
+                font-size: 16px;
+            }
+        }
+        #vero, #sasa{
+            margin-top: 55px;
+        }
+        #daru{
+            img{
+                width: 20%;
+            }
+            .head-title{
+                width: 35%;
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    #struktur{
+        padding: 0px 60px 300px 60px;
+        h3{
+            font-size: 40px;
+        }
+        .containers{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-controls{
+            gap: 600px;
+        }
+        .gallery-controls button{
+            margin-top: 60px;
+            padding: 35px 25px;
+            font-size: 30px;
+        }
+        .bagan{
+            margin-top: 100px;
+            width: 60%;
+        }
+    }
+    #alumni{
+        .cards-container{
+            padding: 20px 150px;
+        }
+        .testimoni{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .associates{
+            .name{
+                font-size: 20px;
+            }
+            span{
+                font-size: 20px;
+            }
+        }
+    }
+    .slider{
+        .cards{
+            h5{
+                font-size: 20px;
+            }
+        }
+    }
+    #graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100svh;
+    }
+    
+}
+@media screen and (min-width: 1200px){
+    header{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    nav{
+        padding: 10px 25px;
+        .logo{
+            img{
+                width: 15%;
+            }
+        }
+    }
+    .hero{
+        padding: 40px 90px;
+        h1{
+            margin-top: 25%;
+        }
+    }
+    #description{
+        padding: 20px 90px;
+        .vision{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                width: 70%;
+            }
+        }
+        ul{
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    #president{
+        padding: 20px 90px;
+        h2{
+            font-size: 50px;
+        }
+        h3{
+            font-size: 40px;
+        }
+        .caption-president{
+            width: 100%;
+            margin-right: 10px;
+        }
+        .image-heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .head-title:first-child{
+            span:first-child{
+                font-size: clamp(#{16px}, 5vw, #{18px});
+            }
+        }
+        #johanes{
+            margin-top: 20px;
+            img{
+                width: 50%;
+            }
+            .head-title{
+                width: 50%;
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+        #sasa, #vero, #marcel{
+            span{
+                font-size: 16px;
+            }
+            .head-title{
+                width: 70%;
+                padding: 25px 20px;
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+        #marcel{
+            margin-top: 50px;
+        }
+        #daru{
+            span{
+                font-size: 16px;
+            }
+            img{
+                width: 30%;
+            }
+            .head-title{
+                width: 30%;
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    #struktur{
+        h3{
+            font-size: clamp(#{40px}, 5vw, #{44px});
+        }
+        .gallery{
+            width: 70%;
+            height: auto;
+            margin-top: 20%;
+        }
+    }
+    #alumni{
+        h2{
+            font-size: 42px;
+        }
+        .cards-container{
+            padding: 20px 300px;
+        }
+    }
+    footer{
+        min-height: 100vh;
+        padding-left: 450px;
+        padding-right: 450px;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        hr{
+            margin-top: 10px;
+        }
+        span{
+            margin-top: 10px;
+        }
+    }
+    #graphic{
+        background-image: url(../images/background/bg-macbook.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 120vh;
+    }
+}
+@media screen and (min-width: 1600px){
+    header{
+        padding: 10px 90px;
+    }
+    nav{
+        padding: 20px 25px;
+        ul{
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .hero{
+        h1{
+            font-size: 65px;
+        }
+    }
+    .slider{
+        .cards{
+            border-radius: 0;
+            padding: 40px;
+        }
+    }
+    .wrapper{
+        i{
+            height: 80px;
+            width: 80px;
+            font-size: 25px;
+            line-height: 80px;
+        }
+        #right{
+            right: -40px;
+        }
+        #left{
+            left: -40px;
+        }
+    }
+    footer{
+        h6{
+            font-size: 30px;
+        }
+        span{
+            font-size: 20px;
+        }
+        .contact{
+            .caption{
+                font-size: 24px;
+            }
+        }
+    }
+}
